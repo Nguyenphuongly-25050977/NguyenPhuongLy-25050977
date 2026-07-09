@@ -38,6 +38,10 @@ type Project = {
   lesson: string[];
   tags: string[];
   progress: number;
+  strengths: string[];
+  improvements: string[];
+  aiUsage: string[];
+  integrity: string[];
   extra?: React.ReactNode;
 };
 
