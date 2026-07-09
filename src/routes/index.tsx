@@ -471,13 +471,6 @@ const PROJECTS: Project[] = [
     ],
     extra: (
       <div className="mt-6 space-y-4">
-        <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
-          <div>
-            <div className="text-4xl mb-3">🎬</div>
-            <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
-            <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
-          </div>
-        </div>
         <div>
           <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng thực hành</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
