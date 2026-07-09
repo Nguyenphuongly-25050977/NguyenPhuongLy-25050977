@@ -551,6 +551,19 @@ function Portfolio() {
                 <li>Rèn luyện kỹ năng trình bày, phân tích, phản biện và tự đánh giá.</li>
               </ul>
             </InfoBlock>
+
+            {/* Lời chia sẻ cá nhân */}
+            <div className="rounded-2xl p-6 bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 border border-primary/20 green-glow">
+              <h4 className="font-semibold mb-3 text-primary flex items-center gap-2">
+                <span>💬</span> Lời chia sẻ cá nhân
+              </h4>
+              <p className="text-sm text-foreground/90 leading-relaxed italic">
+                “Mỗi bài tập trong môn học không chỉ là một nhiệm vụ cần hoàn thành, mà còn là cơ hội để em trải
+                nghiệm sức mạnh của công nghệ số và AI trong học tập. Em học được cách tổ chức thông tin khoa học hơn,
+                đặt câu hỏi thông minh hơn với AI, và đặc biệt là ý thức rõ trách nhiệm khi sử dụng công cụ tạo sinh.
+                Portfolio này là minh chứng cho sự nỗ lực, kiên trì và niềm đam mê học hỏi của em.”
+              </p>
+            </div>
           </div>
         </div>
       </Section>
