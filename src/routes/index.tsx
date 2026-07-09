@@ -796,7 +796,7 @@ function ProjectCard({ p }: { p: Project }) {
 
       {p.extra}
 
-      <div className="mt-6 aspect-[16/6] rounded-2xl bg-gradient-to-br from-muted via-secondary/20 to-accent/20 border border-dashed border-border flex items-center justify-center text-sm text-muted-foreground">
+      <div className="mt-6 aspect-[16/6] rounded-2xl bg-gradient-to-br from-primary/10 via-muted to-accent/20 border border-dashed border-primary/40 flex items-center justify-center text-sm text-primary font-medium green-spotlight">
         📷 Khu vực chèn ảnh minh chứng — thay bằng ảnh thật
       </div>
     </article>
