@@ -260,3 +260,17 @@
     transparent 20px
   );
 }
+
+@utility green-spotlight {
+  background:
+    radial-gradient(circle at 20% 20%, oklch(from var(--green-bright) 0.75 0.13 h / 0.22) 0%, transparent 35%),
+    radial-gradient(circle at 80% 80%, oklch(from var(--green) 0.85 0.08 h / 0.18) 0%, transparent 40%),
+    var(--color-card);
+}
+
+@utility green-glow {
+  box-shadow:
+    0 0 0 1px oklch(from var(--green-bright) 0.7 0.12 h / 0.35),
+    0 8px 32px -8px oklch(from var(--green-bright) 0.6 0.14 h / 0.35),
+    inset 0 1px 0 oklch(from var(--green-bright) 0.85 0.08 h / 0.25);
+}
