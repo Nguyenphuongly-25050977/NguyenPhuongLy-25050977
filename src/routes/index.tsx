@@ -133,67 +133,92 @@ const PROJECTS: Project[] = [
     slug: "tim-kiem",
     tag: "Học thuật",
     title: "Bài tập 2 – Tìm kiếm và đánh giá thông tin học thuật",
-    goal: "Sử dụng toán tử tìm kiếm nâng cao và đánh giá độ tin cậy của nguồn thông tin.",
+    goal: "Phân tích tác động của trí tuệ nhân tạo (AI) đối với giáo dục đại học, thông qua việc tìm kiếm và đánh giá thông tin học thuật từ các nguồn đáng tin cậy.",
     process: [
-      "Chọn chủ đề “Ứng dụng AI trong giáo dục đại học”.",
-      "Áp dụng các toán tử: site:, filetype:, intitle:, \"từ khóa chính xác\", OR, dấu -, after:.",
-      "So sánh kết quả từ Google Search, Google Scholar và website trường đại học.",
+      "Chọn chủ đề: “Tác động của trí tuệ nhân tạo trong giáo dục đại học” — phù hợp ngành công nghệ giáo dục, có tính mới và đa chiều.",
+      "Xác định phạm vi tìm kiếm: cơ sở dữ liệu học thuật (Google Scholar, Microsoft Academic), tạp chí chuyên ngành (QLNN, Công thương), sách chuyên khảo (Springer, Elsevier) và nguồn mở.",
+      "Xây dựng bộ từ khóa: “AI in higher education”, “Artificial Intelligence and pedagogy”, “AI adoption in universities”, “EdTech and AI”.",
+      "Thu thập 12 tài liệu: 7 bài báo khoa học, 2 sách chuyên khảo, 3 nguồn mở phản ánh đa chiều về ứng dụng AI trong giảng dạy, quản lý và đạo đức.",
+      "Đánh giá từng nguồn theo 4 tiêu chí: Tác giả, Cơ quan xuất bản, Phương pháp nghiên cứu, Trích dẫn và Tính cập nhật.",
+      "Tổng hợp bảng đánh giá 12 nguồn và trình bày danh mục tài liệu tham khảo theo chuẩn Harvard Style.",
     ],
-    tools: "Google Search, Google Scholar, cơ sở dữ liệu học thuật, PDF chính thống",
-    evidence: "Ảnh kết quả tìm kiếm và bảng đánh giá 5 nguồn.",
+    tools: "Google Scholar, Microsoft Academic, Springer, Elsevier, UNESCO, OECD, Harvard Referencing",
+    evidence: "Báo cáo PDF hoàn chỉnh gồm mục tiêu, phương pháp, bảng đánh giá 12 nguồn và danh mục tài liệu tham khảo chuẩn Harvard.",
     analysis: [
-      "Tìm kiếm hiệu quả cần chiến lược: chọn từ khóa cốt lõi, giới hạn miền tin cậy, loại nhiễu bằng dấu -.",
-      "Toán tử filetype:pdf giúp lọc báo cáo học thuật; site:edu.vn giúp truy cập tài liệu trường.",
-      "Nguồn có tác giả, tổ chức và năm công bố rõ ràng đáng tin hơn nguồn ẩn danh.",
+      "Nguồn có tác giả và cơ quan uy tín (Selwyn – Monash, Holmes – OECD, UNESCO) có độ tin cậy rất cao nhờ phương pháp nghiên cứu bài bản và trích dẫn nhiều.",
+      "Nguồn mở như Tapchicongthuong, EdSurge chỉ đạt độ tin cậy trung bình do phương pháp tổng hợp, ít trích dẫn hàn lâm — chỉ dùng để tham khảo bối cảnh.",
+      "Blog cá nhân ẩn danh, cũ, không có trích dẫn — độ tin cậy thấp, cần loại bỏ khỏi luận cứ chính.",
+      "Đa dạng nguồn (khoa học + báo cáo + sách) giúp phản ánh đầy đủ cả cơ hội và thách thức khi ứng dụng AI trong giáo dục đại học.",
     ],
     lesson: [
-      "Cần kiểm chứng thông tin trước khi sử dụng.",
-      "Không phụ thuộc vào một nguồn duy nhất.",
+      "Đánh giá nguồn phải dựa trên tiêu chí học thuật, không chỉ dựa vào cảm quan hay lượng truy cập.",
+      "Kết hợp nhiều loại nguồn giúp có cái nhìn đa chiều, tránh thiên lệch.",
+      "Trích dẫn Harvard Style là kỹ năng bắt buộc để đảm bảo liêm chính học thuật.",
     ],
-    tags: ["Search Operators", "Đánh giá nguồn", "Tư duy phản biện"],
+    tags: ["Google Scholar", "Đánh giá nguồn", "Harvard Style", "AI in Education"],
     progress: 100,
     strengths: [
-      "Áp dụng thành thạo nhiều toán tử tìm kiếm nâng cao (site:, filetype:, intitle:).",
-      "So sánh kết quả từ nhiều nguồn khác nhau để đối chiếu độ tin cậy.",
-      "Lập bảng đánh giá 5 nguồn có tiêu chí cụ thể và minh bạch.",
+      "Thu thập đủ 12 tài liệu đa dạng: bài báo khoa học, sách chuyên khảo, báo cáo tổ chức quốc tế và nguồn mở.",
+      "Áp dụng nhất quán 4 tiêu chí đánh giá cho mọi nguồn — có bảng tổng hợp rõ ràng.",
+      "Danh mục tài liệu tham khảo trình bày đúng chuẩn Harvard Style, có link truy cập.",
     ],
     improvements: [
-      "Cần mở rộng sang các cơ sở dữ liệu chuyên ngành như Scopus, Web of Science.",
-      "Rèn luyện thêm kỹ năng đọc lướt để lọc thông tin nhanh hơn.",
+      "Nên bổ sung nguồn từ Scopus, Web of Science để tăng độ chuyên sâu.",
+      "Cần phân tích định lượng chỉ số trích dẫn (citation count) thay vì đánh giá định tính.",
+      "Loại bỏ dứt khoát các nguồn độ tin cậy thấp thay vì đưa vào bảng để so sánh.",
     ],
     aiUsage: [
-      "Có sử dụng AI để gợi ý từ khóa tìm kiếm ban đầu.",
-      "Tự đánh giá độ tin cậy các nguồn — không để AI quyết định thay.",
+      "Có sử dụng AI để gợi ý bộ từ khóa tiếng Anh (“AI in higher education”, “EdTech and AI”).",
+      "Tự đọc, đối chiếu và đánh giá độ tin cậy từng nguồn — AI không quyết định thay.",
+      "Tự trình bày trích dẫn Harvard Style dựa trên hướng dẫn chính thức.",
     ],
     integrity: [
-      "Mọi nguồn được liệt kê đều do tôi tự truy cập và kiểm chứng.",
-      "Bảng đánh giá phản ánh nhận định cá nhân sau khi đọc từng nguồn.",
-      "Không sao chép bảng đánh giá từ bất kỳ tài liệu nào khác.",
+      "Cả 12 tài liệu đều do tôi tự truy cập, đọc và ghi chú lại.",
+      "Bảng đánh giá độ tin cậy phản ánh nhận định cá nhân sau khi phân tích từng nguồn.",
+      "Danh mục tài liệu tham khảo được lập theo chuẩn Harvard, không sao chép từ bài khác.",
     ],
     extra: (
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full text-sm border-collapse">
-          <thead className="bg-primary/10 text-left">
-            <tr>
-              {["Nguồn", "Tác giả / Tổ chức", "Năm", "Độ tin cậy", "Lý do chọn", "Hạn chế"].map((h) => (
-                <th key={h} className="p-3 border border-border font-semibold">{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="bg-card/60">
-            {[
-              ["UNESCO – AI in Education", "UNESCO", "2023", "Rất cao", "Tổ chức quốc tế uy tín", "Nội dung tổng quát"],
-              ["Báo cáo Bộ GD&ĐT", "Bộ Giáo dục", "2024", "Cao", "Nguồn chính thức Việt Nam", "Cập nhật chưa liên tục"],
-              ["Google Scholar paper", "Nguyễn V.A", "2023", "Cao", "Bình duyệt học thuật", "Kỹ thuật, hơi khó đọc"],
-              ["Bài blog cá nhân", "Ẩn danh", "—", "Thấp", "Gợi ý nhanh", "Không kiểm chứng"],
-              ["Website trường ĐH", "ĐHQG Hà Nội", "2024", "Cao", "Nguồn giáo dục .edu.vn", "Phạm vi hẹp"],
-            ].map((row, i) => (
-              <tr key={i} className="hover:bg-primary/5 transition">
-                {row.map((c, j) => <td key={j} className="p-3 border border-border">{c}</td>)}
+      <div className="mt-6 space-y-4">
+        <div className="text-sm font-semibold text-primary uppercase tracking-widest">📊 Bảng đánh giá 12 nguồn thông tin</div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead className="bg-primary/10 text-left">
+              <tr>
+                {["STT", "Tên tài liệu", "Loại nguồn", "Tác giả / Cơ quan", "Phương pháp", "Trích dẫn", "Cập nhật", "Độ tin cậy"].map((h) => (
+                  <th key={h} className="p-3 border border-border font-semibold whitespace-nowrap">{h}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="bg-card/60">
+              {[
+                ["1", "Lê Anh Vinh & Trần Mỹ Ngọc (2023)", "Bài báo khoa học", "Viện KHGDVN", "Phân tích chính sách", "Cao", "Mới", "Rất cao"],
+                ["2", "Trịnh T.T.H. et al. (2025) – QLNN", "Bài báo khoa học", "ĐHQG Hà Nội", "PLS-SEM", "Trung bình", "Mới", "Cao"],
+                ["3", "Tapchicongthuong.vn (2025)", "Nguồn mở", "Tạp chí Công thương", "Tổng hợp", "Thấp", "Mới", "Trung bình"],
+                ["4", "Selwyn, N. (2022)", "Sách chuyên khảo", "Monash University", "Phân tích lý thuyết", "Cao", "Mới", "Rất cao"],
+                ["5", "Holmes, W. et al. (2021)", "Báo cáo học thuật", "OECD", "Tổng hợp dữ liệu", "Cao", "Mới", "Rất cao"],
+                ["6", "Zhang & Dafoe (2020)", "Bài báo khoa học", "Oxford University", "Phân tích định lượng", "Cao", "Khá mới", "Cao"],
+                ["7", "UNESCO (2023)", "Nguồn mở", "UNESCO", "Phân tích chính sách", "Trung bình", "Mới", "Cao"],
+                ["8", "Nguyễn T.H. (2024)", "Bài báo khoa học", "ĐH Bách khoa", "Thực nghiệm", "Trung bình", "Mới", "Cao"],
+                ["9", "EdSurge (2023)", "Nguồn mở", "EdSurge", "Phỏng vấn chuyên gia", "Thấp", "Mới", "Trung bình"],
+                ["10", "Phạm M.H. (2022)", "Bài báo khoa học", "Trường ĐHSP", "Phân tích định tính", "Trung bình", "Mới", "Cao"],
+                ["11", "OECD (2020)", "Báo cáo học thuật", "OECD", "Tổng hợp", "Cao", "Khá mới", "Cao"],
+                ["12", "Blog cá nhân (2021)", "Nguồn mở", "Không rõ", "Ý kiến cá nhân", "Không có", "Cũ", "Thấp"],
+              ].map((row, i) => (
+                <tr key={i} className="hover:bg-primary/5 transition">
+                  {row.map((c, j) => <td key={j} className="p-3 border border-border align-top">{c}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <a
+          href={p2Pdf.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow"
+        >
+          📄 Xem báo cáo đầy đủ: BaoCaoTimKiemThongTin.pdf
+        </a>
       </div>
     ),
   },
