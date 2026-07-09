@@ -15,6 +15,10 @@ import p2Src1 from "@/assets/project2/nguon14.png.asset.json";
 import p2Src2 from "@/assets/project2/nguon15.png.asset.json";
 import p2Src3 from "@/assets/project2/nguon16.png.asset.json";
 import p2Src4 from "@/assets/project2/nguon17.png.asset.json";
+import p3Src1 from "@/assets/project3/prompt1.png.asset.json";
+import p3Src2 from "@/assets/project3/prompt2.png.asset.json";
+import p3Src3 from "@/assets/project3/prompt3.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
