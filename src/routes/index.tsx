@@ -269,18 +269,23 @@ const PROJECTS: Project[] = [
       "Phần phân tích so sánh phản ánh nhận xét cá nhân trung thực.",
     ],
     extra: (
-      <div className="mt-6 grid md:grid-cols-2 gap-4">
-        <div className="rounded-2xl p-5 bg-muted/60 border border-border">
-          <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt ban đầu</div>
-          <p className="text-sm italic">“Giải thích về AI cho tôi.”</p>
+      <div className="mt-6 space-y-4">
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="rounded-2xl p-5 bg-muted/60 border border-border">
+            <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt ban đầu</div>
+            <p className="text-sm italic">“Giải thích về AI cho tôi.”</p>
+          </div>
+          <div className="rounded-2xl p-5 bg-primary/15 border border-primary/30 green-glow">
+            <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt cải tiến</div>
+            <p className="text-sm italic">
+              “Với vai trò giảng viên môn Nhập môn CNS & AI, hãy giải thích khái niệm Trí tuệ nhân tạo cho sinh viên năm nhất
+              trong 400–500 từ, kèm 2 ví dụ đời sống, phần kết luận nêu 3 lưu ý sử dụng có trách nhiệm. Trình bày theo mục đánh số.”
+            </p>
+          </div>
         </div>
-        <div className="rounded-2xl p-5 bg-primary/15 border border-primary/30 green-glow">
-          <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt cải tiến</div>
-          <p className="text-sm italic">
-            “Với vai trò giảng viên môn Nhập môn CNS & AI, hãy giải thích khái niệm Trí tuệ nhân tạo cho sinh viên năm nhất
-            trong 400–500 từ, kèm 2 ví dụ đời sống, phần kết luận nêu 3 lưu ý sử dụng có trách nhiệm. Trình bày theo mục đánh số.”
-          </p>
-        </div>
+        <a href={p3Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn3.pdf
+        </a>
       </div>
     ),
   },
