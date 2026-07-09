@@ -79,6 +79,24 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Quản lý dữ liệu", "Đặt tên file", "Cloud"],
     progress: 100,
+    strengths: [
+      "Thực hiện đầy đủ các thao tác cơ bản: tạo, đổi tên, copy, cut, delete, restore.",
+      "Chụp màn hình chi tiết từng bước làm minh chứng rõ ràng.",
+      "Tổ chức cấu trúc thư mục khoa học, dễ quản lý và dễ tìm.",
+    ],
+    improvements: [
+      "Cần tìm hiểu thêm các phím tắt File Explorer để thao tác nhanh hơn.",
+      "Học cách sử dụng tính năng tìm kiếm nâng cao trong File Explorer.",
+    ],
+    aiUsage: [
+      "Không sử dụng AI trong bài tập này.",
+      "Tự thực hành trực tiếp trên máy tính theo hướng dẫn của giảng viên.",
+    ],
+    integrity: [
+      "Tôi đã tự thực hiện tất cả các thao tác trên máy tính cá nhân.",
+      "Ảnh chụp màn hình là minh chứng thực tế từ quá trình thực hành.",
+      "Tất cả nội dung báo cáo được viết dựa trên trải nghiệm thực tế.",
+    ],
   },
   {
     n: 2,
@@ -104,6 +122,24 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Search Operators", "Đánh giá nguồn", "Tư duy phản biện"],
     progress: 100,
+    strengths: [
+      "Áp dụng thành thạo nhiều toán tử tìm kiếm nâng cao (site:, filetype:, intitle:).",
+      "So sánh kết quả từ nhiều nguồn khác nhau để đối chiếu độ tin cậy.",
+      "Lập bảng đánh giá 5 nguồn có tiêu chí cụ thể và minh bạch.",
+    ],
+    improvements: [
+      "Cần mở rộng sang các cơ sở dữ liệu chuyên ngành như Scopus, Web of Science.",
+      "Rèn luyện thêm kỹ năng đọc lướt để lọc thông tin nhanh hơn.",
+    ],
+    aiUsage: [
+      "Có sử dụng AI để gợi ý từ khóa tìm kiếm ban đầu.",
+      "Tự đánh giá độ tin cậy các nguồn — không để AI quyết định thay.",
+    ],
+    integrity: [
+      "Mọi nguồn được liệt kê đều do tôi tự truy cập và kiểm chứng.",
+      "Bảng đánh giá phản ánh nhận định cá nhân sau khi đọc từng nguồn.",
+      "Không sao chép bảng đánh giá từ bất kỳ tài liệu nào khác.",
+    ],
     extra: (
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-sm border-collapse">
@@ -155,6 +191,24 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Prompt", "So sánh", "AI tạo sinh"],
     progress: 100,
+    strengths: [
+      "Prompt cải tiến có đầy đủ vai trò, bối cảnh, nhiệm vụ, định dạng và tiêu chí.",
+      "So sánh trực quan hai phiên bản prompt và chất lượng đầu ra.",
+      "Biết cách điều chỉnh prompt theo mục tiêu học tập cụ thể.",
+    ],
+    improvements: [
+      "Cần thử thêm các kỹ thuật prompt nâng cao như few-shot, chain-of-thought.",
+      "Học cách viết prompt cho tác vụ khó hơn: phân tích số liệu, viết code.",
+    ],
+    aiUsage: [
+      "Sử dụng ChatGPT, Gemini, Claude để thử nghiệm và so sánh kết quả.",
+      "Nhiệm vụ của tôi là thiết kế prompt và đánh giá đầu ra — không copy nguyên văn.",
+    ],
+    integrity: [
+      "Tất cả prompt là do tôi tự viết dựa trên khung học được.",
+      "Kết quả AI được chụp lại đầy đủ, không chỉnh sửa để đánh lừa.",
+      "Phần phân tích so sánh phản ánh nhận xét cá nhân trung thực.",
+    ],
     extra: (
       <div className="mt-6 grid md:grid-cols-2 gap-4">
         <div className="rounded-2xl p-5 bg-muted/60 border border-border">
@@ -196,6 +250,24 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Trello", "Notion", "Quản lý dự án"],
     progress: 100,
+    strengths: [
+      "Bảng công việc rõ ràng, phân công cụ thể tới từng thành viên.",
+      "Theo dõi trạng thái công việc minh bạch, dễ phát hiện điểm nghẽn.",
+      "Tổ chức họp nhóm định kỳ và có biên bản làm minh chứng.",
+    ],
+    improvements: [
+      "Cần thiết lập nhắc hạn tự động để giảm việc quên deadline.",
+      "Thử tích hợp thêm Google Calendar để đồng bộ lịch nhóm.",
+    ],
+    aiUsage: [
+      "Sử dụng AI để gợi ý mẫu bảng phân công và checklist họp nhóm.",
+      "Không dùng AI để làm thay công việc của thành viên trong nhóm.",
+    ],
+    integrity: [
+      "Nội dung bảng phân công là kết quả thống nhất thực tế của nhóm.",
+      "Biên bản họp và trạng thái công việc được cập nhật đúng sự thật.",
+      "Không chỉnh sửa số liệu tiến độ để làm đẹp báo cáo.",
+    ],
     extra: (
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-sm border-collapse">
@@ -249,6 +321,24 @@ const PROJECTS: Project[] = [
     ],
     tags: ["AI tạo sinh", "Video", "Infographic"],
     progress: 100,
+    strengths: [
+      "Kết hợp nhiều công cụ AI (ChatGPT, DALL·E, TTS) trong cùng một sản phẩm.",
+      "Kịch bản được biên tập lại theo giọng cá nhân, không copy nguyên văn AI.",
+      "Sản phẩm có cấu trúc hoàn chỉnh: ý tưởng → kịch bản → hình ảnh → âm thanh → dựng.",
+    ],
+    improvements: [
+      "Cần nâng cấp kỹ năng dựng video (transition, timing, âm thanh).",
+      "Đối chiếu chặt hơn nội dung AI tạo với nguồn học thuật chính thống.",
+    ],
+    aiUsage: [
+      "ChatGPT hỗ trợ viết nháp kịch bản; tôi biên tập lại toàn bộ.",
+      "DALL·E tạo hình minh họa; TTS tạo giọng đọc — đều được tôi kiểm duyệt.",
+    ],
+    integrity: [
+      "Ghi rõ trong sản phẩm các phần có sự tham gia của AI.",
+      "Nội dung cuối cùng do tôi chịu trách nhiệm về tính chính xác.",
+      "Không dùng AI để giả mạo giọng nói hoặc hình ảnh người thật.",
+    ],
     extra: (
       <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
         <div>
@@ -283,6 +373,24 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Đạo đức", "Quyền riêng tư", "Phản biện"],
     progress: 100,
+    strengths: [
+      "Xây dựng được bộ 7 nguyên tắc sử dụng AI cá nhân rõ ràng, khả thi.",
+      "Phân tích đa chiều các rủi ro: đạo văn, thiên kiến, quyền riêng tư.",
+      "Đối chiếu bộ nguyên tắc với quy định thực tế của nhà trường.",
+    ],
+    improvements: [
+      "Cần cập nhật bộ nguyên tắc theo các quy định AI mới của Bộ GD&ĐT.",
+      "Bổ sung tình huống thực tế minh họa cho từng nguyên tắc.",
+    ],
+    aiUsage: [
+      "Chỉ sử dụng AI để hỏi ví dụ tình huống đạo đức, không viết thay báo cáo.",
+      "Toàn bộ 7 nguyên tắc là do tôi tự soạn dựa trên suy nghĩ cá nhân.",
+    ],
+    integrity: [
+      "Bộ nguyên tắc phản ánh cam kết cá nhân thực sự của tôi khi dùng AI.",
+      "Không copy bộ nguyên tắc từ tài liệu có sẵn nào.",
+      "Tôi tự chịu trách nhiệm áp dụng các nguyên tắc này trong học tập.",
+    ],
     extra: (
       <div className="mt-6 grid md:grid-cols-2 gap-3">
         {[
