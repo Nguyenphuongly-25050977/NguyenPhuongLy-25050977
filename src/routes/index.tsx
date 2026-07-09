@@ -706,15 +706,16 @@ const EVIDENCE = [
 
 
 const SKILLS = [
-  { name: "Quản lý tệp và dữ liệu số", level: 90, use: "Tổ chức tài liệu học tập, đồng bộ đám mây" },
-  { name: "Tìm kiếm thông tin học thuật", level: 85, use: "Nghiên cứu, viết tiểu luận" },
-  { name: "Đánh giá độ tin cậy nguồn", level: 80, use: "Chọn tài liệu tham khảo chất lượng" },
-  { name: "Viết Prompt hiệu quả", level: 88, use: "Khai thác AI hỗ trợ học tập" },
-  { name: "Làm việc nhóm trực tuyến", level: 82, use: "Điều phối dự án nhóm" },
-  { name: "Sáng tạo nội dung số bằng AI", level: 78, use: "Tạo video, infographic học tập" },
-  { name: "Sử dụng AI có trách nhiệm", level: 92, use: "Bảo đảm liêm chính học thuật" },
-  { name: "Tự đánh giá & cải thiện bản thân", level: 85, use: "Phản tư và phát triển liên tục" },
+  { name: "Quản lý tệp & dữ liệu số", short: "Quản lý tệp", level: 94, use: "Tổ chức tài liệu học tập, đồng bộ đám mây" },
+  { name: "Tìm kiếm thông tin học thuật", short: "Tìm kiếm", level: 97, use: "Nghiên cứu, viết tiểu luận" },
+  { name: "Đánh giá độ tin cậy nguồn", short: "Đánh giá nguồn", level: 100, use: "Chọn tài liệu tham khảo chất lượng" },
+  { name: "Viết Prompt hiệu quả", short: "Prompt", level: 96, use: "Khai thác AI hỗ trợ học tập" },
+  { name: "Làm việc nhóm trực tuyến", short: "Teamwork", level: 91, use: "Điều phối dự án nhóm" },
+  { name: "Sáng tạo nội dung số bằng AI", short: "Sáng tạo AI", level: 93, use: "Tạo video, infographic học tập" },
+  { name: "Sử dụng AI có trách nhiệm", short: "AI có TN", level: 100, use: "Bảo đảm liêm chính học thuật" },
+  { name: "Tự đánh giá & cải thiện bản thân", short: "Tự đánh giá", level: 92, use: "Phản tư và phát triển liên tục" },
 ];
+
 
 /* ============ Component ============ */
 function Portfolio() {
