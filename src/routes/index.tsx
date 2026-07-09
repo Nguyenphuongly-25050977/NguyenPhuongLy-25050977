@@ -464,34 +464,6 @@ function Portfolio() {
                 <div className="text-[11px] uppercase tracking-widest text-primary mt-2">AI · Human</div>
               </div>
             </div>
-            {/* Info card below avatar */}
-            <div className="mt-8 space-y-2.5">
-              <div className="text-center mb-4">
-                <div className="text-2xl font-bold text-foreground">Nguyễn Bảo Thy</div>
-                <div className="text-sm text-muted-foreground">Sinh viên · Công nghệ số &amp; AI</div>
-              </div>
-              {[
-                { icon: "🎓", label: "NGÀNH HỌC", value: "Kinh Tế Quốc Tế" },
-                { icon: "🏛️", label: "TRƯỜNG", value: "Đại học Kinh tế - ĐHQGHN" },
-                { icon: "📖", label: "LỚP", value: "Kinh Tế Quốc Tế 6" },
-                { icon: "✉️", label: "LIÊN HỆ", value: "25051068@vnu.edu.vn" },
-              ].map((f) => (
-                <div
-                  key={f.label}
-                  className="flex items-center justify-between gap-3 px-4 py-3 rounded-full bg-card/80 border border-border backdrop-blur hover:border-primary/50 hover:-translate-y-0.5 transition-all shadow-sm"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center text-sm shrink-0">
-                      {f.icon}
-                    </span>
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-primary">
-                      {f.label}
-                    </span>
-                  </div>
-                  <span className="text-sm font-semibold text-foreground truncate">{f.value}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
