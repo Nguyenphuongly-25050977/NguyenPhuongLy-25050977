@@ -1093,46 +1093,129 @@ function Portfolio() {
       {/* ========== Conclusion ========== */}
       <Section id="conclusion" eyebrow="Conclusion" title="Tổng kết & tự đánh giá">
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="reveal p-6 rounded-2xl bg-card border border-border">
-            <h4 className="font-semibold mb-3 text-primary">Khó khăn đã gặp</h4>
-            <ul className="list-disc pl-5 space-y-1.5 text-sm text-muted-foreground">
-              <li>Sắp xếp nội dung sao cho khoa học và mạch lạc.</li>
-              <li>Đánh giá độ tin cậy của thông tin từ nhiều nguồn.</li>
-              <li>Viết prompt đủ rõ ràng để AI trả lời chất lượng.</li>
-              <li>Cân bằng giữa sử dụng AI và tư duy cá nhân.</li>
-            </ul>
-          </div>
-          <div className="reveal p-6 rounded-2xl bg-card border border-border">
-            <h4 className="font-semibold mb-3 text-primary">Cách khắc phục</h4>
-            <ul className="list-disc pl-5 space-y-1.5 text-sm text-muted-foreground">
-              <li>Lập kế hoạch trước khi thực hiện từng nhiệm vụ.</li>
-              <li>Kiểm chứng thông tin từ nhiều nguồn học thuật uy tín.</li>
-              <li>So sánh nhiều phiên bản prompt để tối ưu kết quả.</li>
-              <li>Chủ động chỉnh sửa, cá nhân hóa mọi sản phẩm AI.</li>
-            </ul>
-          </div>
+          {/* Hành trình xây Portfolio */}
           <div className="reveal p-6 rounded-2xl bg-card border border-border md:col-span-2">
-            <h4 className="font-semibold mb-3 text-primary">Định hướng tương lai</h4>
+            <h4 className="font-semibold mb-3 text-primary flex items-center gap-2">📖 Hành trình xây dựng Portfolio</h4>
+            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+              <p>
+                Với mình, việc bắt tay xây dựng một Digital Portfolio là một hành trình khá lạ nhưng rất đáng nhớ.
+                Đây là lần đầu tiên mình vừa đóng vai người viết nội dung, vừa là người thiết kế và tổ chức toàn bộ
+                một trang web cá nhân để tổng hợp các sản phẩm học tập trong học kỳ.
+              </p>
+              <p>
+                Quá trình này giúp mình hiểu rõ hơn về giá trị của việc trình bày thông tin có cấu trúc: từ cách chia
+                mục, chọn màu chủ đạo, đến việc căn chỉnh khoảng trắng để người xem dễ theo dõi. Song song đó, mình
+                cũng có cơ hội nhìn lại cả chặng đường học, biết điểm nào bản thân đã tiến bộ và điểm nào cần luyện thêm.
+              </p>
+              <p>
+                Điều mình bất ngờ nhất là công nghệ số khiến việc lưu trữ và chia sẻ tri thức trở nên linh hoạt hơn rất
+                nhiều. Portfolio này không dừng lại ở một bài tập nộp cuối kỳ, mà sẽ tiếp tục được cập nhật như một
+                “sổ tay số” cá nhân trong các học kỳ tiếp theo.
+              </p>
+            </div>
+          </div>
+
+          {/* Kiến thức & kỹ năng quan trọng nhất */}
+          <div className="reveal p-6 rounded-2xl bg-card border border-border md:col-span-2">
+            <h4 className="font-semibold mb-4 text-primary flex items-center gap-2">🏅 Kiến thức & kỹ năng nổi bật nhất</h4>
+            <div className="grid md:grid-cols-2 gap-3">
+              {[
+                {
+                  t: "Thao tác số nền tảng",
+                  d: "Mình đã quen tay với các thao tác quản lý file như tạo mới, đổi tên, di chuyển và phân loại theo môn học. Kết hợp thêm việc tìm kiếm trên Google Scholar và đánh giá nguồn theo tiêu chí CRAAP giúp mình lọc được tài liệu chất lượng cho việc học.",
+                },
+                {
+                  t: "Kiến thức về AI & Prompting",
+                  d: "Mình nắm được nguyên lý hoạt động của các mô hình ngôn ngữ lớn và cách thiết kế prompt theo công thức RTF. Nhờ vậy, ChatGPT trở thành trợ lý học tập thay vì công cụ trả lời thay, đồng thời mình vẫn giữ được thói quen trích dẫn nguồn rõ ràng.",
+                },
+                {
+                  t: "Ý thức liêm chính học thuật",
+                  d: "Mình xem việc trung thực trong học tập là ưu tiên hàng đầu. Mọi sản phẩm trong Portfolio đều do mình trực tiếp thực hiện, có ghi chú rõ phần nào có sự hỗ trợ của AI và trích dẫn đầy đủ nguồn tham khảo.",
+                },
+                {
+                  t: "Cộng tác & giao tiếp số",
+                  d: "Qua các bài tập nhóm, mình rèn được kỹ năng phối hợp online: chia việc trên Trello, họp qua Meet, cùng chỉnh sửa tài liệu trên Google Docs và bám sát tiến độ chung của nhóm một cách chủ động hơn.",
+                },
+              ].map((it, i) => (
+                <div key={i} className="p-4 rounded-xl bg-primary/5 border border-primary/20">
+                  <div className="font-semibold text-primary mb-1 flex items-center gap-2">✓ {it.t}</div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{it.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Khó khăn & cách vượt qua */}
+          <div className="reveal p-6 rounded-2xl bg-card border border-border md:col-span-2">
+            <h4 className="font-semibold mb-4 text-primary flex items-center gap-2">⛰️ Thử thách gặp phải & cách mình vượt qua</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <div className="font-semibold mb-2">Thử thách:</div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><span className="text-primary">•</span>Cân đối thời gian khi cùng lúc chạy deadline của nhiều môn học khác nhau.</li>
+                  <li className="flex gap-2"><span className="text-primary">•</span>Làm quen với hàng loạt công cụ mới: Canva, Notion, Trello và các nền tảng AI.</li>
+                  <li className="flex gap-2"><span className="text-primary">•</span>Phân biệt tài liệu học thuật uy tín với nội dung nhiễu, thiếu kiểm chứng trên mạng.</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold mb-2">Cách mình xử lý:</div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><span className="text-primary">→</span>Lập kế hoạch học theo tuần, ưu tiên các đầu việc gần deadline và có trọng số cao.</li>
+                  <li className="flex gap-2"><span className="text-primary">→</span>Dành thời gian xem hướng dẫn, làm theo từng bước và chủ động hỏi khi mắc kẹt.</li>
+                  <li className="flex gap-2"><span className="text-primary">→</span>Áp dụng bộ tiêu chí CRAAP ở Chương 2 để sàng lọc và chọn lại nguồn tin đáng tin cậy.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Điều tự hào nhất */}
+          <div className="reveal p-8 rounded-2xl bg-gradient-to-br from-primary/25 via-primary/15 to-secondary/20 border border-primary/30 md:col-span-2 green-spotlight">
+            <h4 className="font-semibold mb-3 text-primary flex items-center gap-2">💙 Điều mình tự hào nhất</h4>
+            <div className="space-y-3 text-sm leading-relaxed">
+              <p>
+                Điều khiến mình tự hào nhất chính là khoảng cách rõ rệt giữa mình của đầu học kỳ và mình ở thời điểm
+                hoàn tất Portfolio. Từ một sinh viên còn khá lóng ngóng với công cụ số, giờ đây mình đã có thể tự thiết
+                kế một trang portfolio hoàn chỉnh và sử dụng AI như một trợ thủ đắc lực nhưng vẫn giữ được tư duy độc lập.
+              </p>
+              <p>
+                Mình cũng thấy vui vì đã hoàn thành đủ 6 bài tập lớn với chất lượng chỉn chu, mỗi bài đều rút được
+                bài học riêng và tốt hơn bài trước. Portfolio này không chỉ là bằng chứng cho những gì đã học được,
+                mà còn là động lực để mình tiếp tục nâng cấp kỹ năng số ở các học kỳ sau.
+              </p>
+            </div>
+          </div>
+
+          {/* Cam kết liêm chính */}
+          <div className="reveal md:col-span-2 p-8 rounded-2xl bg-card border border-primary/30 text-center">
+            <h4 className="font-semibold text-primary flex items-center justify-center gap-2 mb-3">🔒 Cam kết Liêm chính Học thuật</h4>
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Portfolio này được thực hiện với tinh thần học tập nghiêm túc. Toàn bộ nội dung đều do mình tự tìm hiểu,
+              trực tiếp viết bằng ngôn ngữ của mình và có ghi chú rõ ràng khi có sự hỗ trợ của AI. Mình xem AI là công
+              cụ đồng hành để mở rộng khả năng học tập, không phải thứ thay thế cho tư duy cá nhân. Mình cam kết tuân
+              thủ các nguyên tắc liêm chính học thuật trong suốt quá trình học tập tại trường.
+            </p>
+            <div className="mt-5">
+              <div className="font-semibold text-primary">— Trịnh Xuân An</div>
+              <div className="text-xs text-muted-foreground">Sinh viên môn Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo</div>
+            </div>
+          </div>
+
+          {/* Định hướng tương lai */}
+          <div className="reveal p-6 rounded-2xl bg-card border border-border md:col-span-2">
+            <h4 className="font-semibold mb-3 text-primary flex items-center gap-2">🚀 Định hướng tiếp theo</h4>
             <ul className="grid md:grid-cols-3 gap-3 text-sm">
               {[
-                "Tiếp tục dùng Portfolio để lưu trữ sản phẩm học tập.",
-                "Ứng dụng kỹ năng số vào học tập, nghiên cứu và công việc.",
-                "Sử dụng AI như công cụ hỗ trợ học tập có trách nhiệm.",
+                "Tiếp tục cập nhật Portfolio như một hồ sơ học tập & nghề nghiệp dài hạn.",
+                "Ứng dụng kỹ năng số vào việc nghiên cứu, học nhóm và các dự án cá nhân.",
+                "Rèn thói quen dùng AI có kiểm chứng, có trích nguồn và có trách nhiệm.",
               ].map((t, i) => (
                 <li key={i} className="p-4 rounded-xl bg-primary/10 border border-primary/20">{t}</li>
               ))}
             </ul>
           </div>
-          <blockquote className="reveal md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 border border-primary/20 text-lg italic leading-relaxed green-spotlight">
-            “Thông qua quá trình xây dựng Portfolio kỹ thuật số cá nhân, em không chỉ lưu trữ các sản phẩm học tập
-            mà còn nhìn lại toàn bộ quá trình rèn luyện kỹ năng công nghệ số, tư duy phản biện và khả năng sử dụng AI
-            có trách nhiệm. Portfolio giúp em hiểu rằng trong môi trường học tập hiện đại, công nghệ không chỉ là công
-            cụ hỗ trợ mà còn là phương tiện để người học thể hiện năng lực, sự sáng tạo và thái độ học tập nghiêm túc.
-            Những kỹ năng như quản lý dữ liệu, tìm kiếm học thuật, viết prompt, làm việc nhóm trực tuyến và đánh giá
-            đạo đức AI sẽ tiếp tục có giá trị trong học tập, nghiên cứu và công việc tương lai.”
-          </blockquote>
         </div>
       </Section>
+
 
       {/* ========== Footer ========== */}
       <footer className="mt-16 border-t border-border bg-card/50 backdrop-blur">
