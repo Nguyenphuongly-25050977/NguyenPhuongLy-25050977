@@ -1306,20 +1306,20 @@ function SkillsLineChart() {
   const gridVals = [85, 90, 95, 100];
 
   return (
-    <div className="reveal rounded-2xl p-4 md:p-6 bg-card border border-border overflow-x-auto">
+    <div className="reveal rounded-2xl p-4 md:p-6 bg-white border border-blue-200 shadow-lg overflow-x-auto">
       <div className="flex items-center justify-between mb-3">
-        <h4 className="font-semibold text-primary">Biểu đồ dây – Mức độ đạt được (%)</h4>
-        <span className="text-xs text-muted-foreground">Thang 85% – 100%</span>
+        <h4 className="font-semibold text-blue-700">Biểu đồ dây – Mức độ đạt được (%)</h4>
+        <span className="text-xs text-blue-500">Thang 85% – 100%</span>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto min-w-[640px]" role="img" aria-label="Biểu đồ đường mức độ kỹ năng">
         <defs>
           <linearGradient id="skillLine" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="hsl(var(--primary))" />
-            <stop offset="100%" stopColor="hsl(var(--secondary))" />
+            <stop offset="0%" stopColor="#1D4ED8" />
+            <stop offset="100%" stopColor="#38BDF8" />
           </linearGradient>
           <linearGradient id="skillArea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
           </linearGradient>
         </defs>
 
@@ -1331,11 +1331,11 @@ function SkillsLineChart() {
               x2={W - padR}
               y1={y(v)}
               y2={y(v)}
-              stroke="hsl(var(--border))"
+              stroke={v === 100 ? "#3B82F6" : "#DBEAFE"}
               strokeDasharray={v === 100 ? "0" : "4 4"}
-              strokeWidth={v === 100 ? 1.2 : 1}
+              strokeWidth={v === 100 ? 1.4 : 1}
             />
-            <text x={padL - 10} y={y(v) + 4} textAnchor="end" fontSize="11" fill="hsl(var(--muted-foreground))">
+            <text x={padL - 10} y={y(v) + 4} textAnchor="end" fontSize="11" fill="#1D4ED8">
               {v}%
             </text>
           </g>
@@ -1361,13 +1361,13 @@ function SkillsLineChart() {
           const isPeak = s.level === 100;
           return (
             <g key={s.name}>
-              {isPeak && <circle cx={cx} cy={cy} r="12" fill="hsl(var(--primary))" opacity="0.18" />}
+              {isPeak && <circle cx={cx} cy={cy} r="12" fill="#3B82F6" opacity="0.2" />}
               <circle
                 cx={cx}
                 cy={cy}
                 r={isPeak ? 7 : 5}
-                fill={isPeak ? "hsl(var(--primary))" : "hsl(var(--background))"}
-                stroke="hsl(var(--primary))"
+                fill={isPeak ? "#1D4ED8" : "#FFFFFF"}
+                stroke="#1D4ED8"
                 strokeWidth="2.5"
               />
               <text
@@ -1376,7 +1376,7 @@ function SkillsLineChart() {
                 textAnchor="middle"
                 fontSize={isPeak ? 13 : 11}
                 fontWeight={isPeak ? 700 : 600}
-                fill="hsl(var(--primary))"
+                fill="#1D4ED8"
               >
                 {s.level}%
               </text>
@@ -1385,7 +1385,8 @@ function SkillsLineChart() {
                 y={H - padB + 20}
                 textAnchor="middle"
                 fontSize="11"
-                fill="hsl(var(--foreground))"
+                fontWeight={600}
+                fill="#1E3A8A"
               >
                 {s.short}
               </text>
@@ -1394,7 +1395,7 @@ function SkillsLineChart() {
                 y={H - padB + 36}
                 textAnchor="middle"
                 fontSize="10"
-                fill="hsl(var(--muted-foreground))"
+                fill="#60A5FA"
               >
                 #{String(i + 1).padStart(2, "0")}
               </text>
@@ -1403,6 +1404,7 @@ function SkillsLineChart() {
         })}
       </svg>
     </div>
+
   );
 }
 
