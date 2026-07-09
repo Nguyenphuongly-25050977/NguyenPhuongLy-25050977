@@ -137,8 +137,31 @@
     border-color: var(--color-border);
   }
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    background:
+      radial-gradient(circle at 10% 0%, oklch(0.94 0.06 340) 0%, transparent 45%),
+      radial-gradient(circle at 90% 20%, oklch(0.93 0.06 220) 0%, transparent 40%),
+      var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Fraunces", "Be Vietnam Pro", serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+@utility reveal-in {
+  opacity: 1;
+  transform: translateY(0);
 }
