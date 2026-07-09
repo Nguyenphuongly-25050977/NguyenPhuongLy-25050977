@@ -10,6 +10,8 @@ import p2Pdf from "@/assets/project2/BaoCaoTimKiemThongTin.pdf.asset.json";
 import p3Pdf from "@/assets/project3/BaoCao_DuAn3.pdf.asset.json";
 import p4Pdf from "@/assets/project4/BaoCao_DuAn4.pdf.asset.json";
 import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
+import p5Docx from "@/assets/project5/BaoCao_DuAn5.docx.asset.json";
+
 import p6Pdf from "@/assets/project6/BaoCao_DuAn6.pdf.asset.json";
 import p2Src1 from "@/assets/project2/nguon14.png.asset.json";
 import p2Src2 from "@/assets/project2/nguon15.png.asset.json";
