@@ -17,6 +17,10 @@ import p5Img3 from "@/assets/project5/infographic-full.png.asset.json";
 
 
 import p6Pdf from "@/assets/project6/BaoCao_DuAn6.pdf.asset.json";
+import p6Docx from "@/assets/project6/BaoCao_DuAn6.docx.asset.json";
+import p6Img1 from "@/assets/project6/prompt-danyai.png.asset.json";
+import p6Img2 from "@/assets/project6/prompt-loiich.png.asset.json";
+
 import p2Src1 from "@/assets/project2/nguon14.png.asset.json";
 import p2Src2 from "@/assets/project2/nguon15.png.asset.json";
 import p2Src3 from "@/assets/project2/nguon16.png.asset.json";
