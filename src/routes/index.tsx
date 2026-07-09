@@ -418,9 +418,6 @@ const PROJECTS: Project[] = [
             ))}
           </div>
         </div>
-        <a href={p4Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
-          📄 Xem báo cáo đầy đủ: BaoCao_DuAn4.pdf
-        </a>
       </div>
     ),
   },
