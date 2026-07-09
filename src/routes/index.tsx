@@ -706,15 +706,16 @@ const EVIDENCE = [
 
 
 const SKILLS = [
-  { name: "Quản lý tệp và dữ liệu số", level: 90, use: "Tổ chức tài liệu học tập, đồng bộ đám mây" },
-  { name: "Tìm kiếm thông tin học thuật", level: 85, use: "Nghiên cứu, viết tiểu luận" },
-  { name: "Đánh giá độ tin cậy nguồn", level: 80, use: "Chọn tài liệu tham khảo chất lượng" },
-  { name: "Viết Prompt hiệu quả", level: 88, use: "Khai thác AI hỗ trợ học tập" },
-  { name: "Làm việc nhóm trực tuyến", level: 82, use: "Điều phối dự án nhóm" },
-  { name: "Sáng tạo nội dung số bằng AI", level: 78, use: "Tạo video, infographic học tập" },
-  { name: "Sử dụng AI có trách nhiệm", level: 92, use: "Bảo đảm liêm chính học thuật" },
-  { name: "Tự đánh giá & cải thiện bản thân", level: 85, use: "Phản tư và phát triển liên tục" },
+  { name: "Quản lý tệp & dữ liệu số", short: "Quản lý tệp", level: 94, use: "Tổ chức tài liệu học tập, đồng bộ đám mây" },
+  { name: "Tìm kiếm thông tin học thuật", short: "Tìm kiếm", level: 97, use: "Nghiên cứu, viết tiểu luận" },
+  { name: "Đánh giá độ tin cậy nguồn", short: "Đánh giá nguồn", level: 100, use: "Chọn tài liệu tham khảo chất lượng" },
+  { name: "Viết Prompt hiệu quả", short: "Prompt", level: 96, use: "Khai thác AI hỗ trợ học tập" },
+  { name: "Làm việc nhóm trực tuyến", short: "Teamwork", level: 91, use: "Điều phối dự án nhóm" },
+  { name: "Sáng tạo nội dung số bằng AI", short: "Sáng tạo AI", level: 93, use: "Tạo video, infographic học tập" },
+  { name: "Sử dụng AI có trách nhiệm", short: "AI có TN", level: 100, use: "Bảo đảm liêm chính học thuật" },
+  { name: "Tự đánh giá & cải thiện bản thân", short: "Tự đánh giá", level: 92, use: "Phản tư và phát triển liên tục" },
 ];
+
 
 /* ============ Component ============ */
 function Portfolio() {
@@ -1069,24 +1070,25 @@ function Portfolio() {
 
       {/* ========== Skills ========== */}
       <Section id="skills" eyebrow="Skills Matrix" title="Bảng tổng hợp kỹ năng đạt được">
-        <div className="grid md:grid-cols-2 gap-4">
-          {SKILLS.map((s) => (
-            <div key={s.name} className="reveal p-5 rounded-2xl bg-card border border-border">
-              <div className="flex justify-between items-baseline mb-2">
-                <h4 className="font-semibold">{s.name}</h4>
-                <span className="text-sm font-bold text-primary">{s.level}%</span>
+        <SkillsLineChart />
+        <div className="grid md:grid-cols-2 gap-3 mt-8">
+          {SKILLS.map((s, i) => (
+            <div key={s.name} className="reveal flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
+              <div className={`shrink-0 w-12 h-12 rounded-full grid place-items-center font-bold text-sm ${s.level === 100 ? "bg-primary text-primary-foreground" : "bg-primary/15 text-primary"}`}>
+                {s.level}%
               </div>
-              <div className="h-2 rounded-full bg-muted overflow-hidden mb-3">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000"
-                  style={{ width: `${s.level}%` }}
-                />
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">#{String(i + 1).padStart(2, "0")}</span>
+                  <h4 className="font-semibold truncate">{s.name}</h4>
+                </div>
+                <p className="text-sm text-muted-foreground"><strong className="text-foreground/80">Ứng dụng:</strong> {s.use}</p>
               </div>
-              <p className="text-sm text-muted-foreground"><strong className="text-foreground/80">Ứng dụng:</strong> {s.use}</p>
             </div>
           ))}
         </div>
       </Section>
+
 
       {/* ========== Conclusion ========== */}
       <Section id="conclusion" eyebrow="Conclusion" title="Tổng kết & tự đánh giá">
@@ -1202,7 +1204,127 @@ function Section({
   );
 }
 
+function SkillsLineChart() {
+  const W = 900;
+  const H = 340;
+  const padL = 48;
+  const padR = 24;
+  const padT = 30;
+  const padB = 70;
+  const chartW = W - padL - padR;
+  const chartH = H - padT - padB;
+  const yMin = 85;
+  const yMax = 100;
+  const n = SKILLS.length;
+  const x = (i: number) => padL + (chartW * i) / (n - 1);
+  const y = (v: number) => padT + chartH * (1 - (v - yMin) / (yMax - yMin));
+  const points = SKILLS.map((s, i) => `${x(i)},${y(s.level)}`).join(" ");
+  const areaPath = `M ${x(0)},${padT + chartH} L ${points.split(" ").join(" L ")} L ${x(n - 1)},${padT + chartH} Z`;
+  const gridVals = [85, 90, 95, 100];
+
+  return (
+    <div className="reveal rounded-2xl p-4 md:p-6 bg-card border border-border overflow-x-auto">
+      <div className="flex items-center justify-between mb-3">
+        <h4 className="font-semibold text-primary">Biểu đồ dây – Mức độ đạt được (%)</h4>
+        <span className="text-xs text-muted-foreground">Thang 85% – 100%</span>
+      </div>
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto min-w-[640px]" role="img" aria-label="Biểu đồ đường mức độ kỹ năng">
+        <defs>
+          <linearGradient id="skillLine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="hsl(var(--primary))" />
+            <stop offset="100%" stopColor="hsl(var(--secondary))" />
+          </linearGradient>
+          <linearGradient id="skillArea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+
+        {/* Grid + Y labels */}
+        {gridVals.map((v) => (
+          <g key={v}>
+            <line
+              x1={padL}
+              x2={W - padR}
+              y1={y(v)}
+              y2={y(v)}
+              stroke="hsl(var(--border))"
+              strokeDasharray={v === 100 ? "0" : "4 4"}
+              strokeWidth={v === 100 ? 1.2 : 1}
+            />
+            <text x={padL - 10} y={y(v) + 4} textAnchor="end" fontSize="11" fill="hsl(var(--muted-foreground))">
+              {v}%
+            </text>
+          </g>
+        ))}
+
+        {/* Area */}
+        <path d={areaPath} fill="url(#skillArea)" />
+
+        {/* Line */}
+        <polyline
+          points={points}
+          fill="none"
+          stroke="url(#skillLine)"
+          strokeWidth="3"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        />
+
+        {/* Dots + values + x labels */}
+        {SKILLS.map((s, i) => {
+          const cx = x(i);
+          const cy = y(s.level);
+          const isPeak = s.level === 100;
+          return (
+            <g key={s.name}>
+              {isPeak && <circle cx={cx} cy={cy} r="12" fill="hsl(var(--primary))" opacity="0.18" />}
+              <circle
+                cx={cx}
+                cy={cy}
+                r={isPeak ? 7 : 5}
+                fill={isPeak ? "hsl(var(--primary))" : "hsl(var(--background))"}
+                stroke="hsl(var(--primary))"
+                strokeWidth="2.5"
+              />
+              <text
+                x={cx}
+                y={cy - 14}
+                textAnchor="middle"
+                fontSize={isPeak ? 13 : 11}
+                fontWeight={isPeak ? 700 : 600}
+                fill="hsl(var(--primary))"
+              >
+                {s.level}%
+              </text>
+              <text
+                x={cx}
+                y={H - padB + 20}
+                textAnchor="middle"
+                fontSize="11"
+                fill="hsl(var(--foreground))"
+              >
+                {s.short}
+              </text>
+              <text
+                x={cx}
+                y={H - padB + 36}
+                textAnchor="middle"
+                fontSize="10"
+                fill="hsl(var(--muted-foreground))"
+              >
+                #{String(i + 1).padStart(2, "0")}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+}
+
 function InfoBlock({ title, children }: { title: string; children: React.ReactNode }) {
+
   return (
     <div className="rounded-2xl p-6 bg-card border border-border">
       <h4 className="font-semibold mb-2 text-primary">{title}</h4>
