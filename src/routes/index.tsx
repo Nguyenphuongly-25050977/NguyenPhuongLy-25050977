@@ -215,6 +215,17 @@ const PROJECTS: Project[] = [
             </tbody>
           </table>
         </div>
+        <div>
+          <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng thực hành</div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {["Tìm kiếm nâng cao trên Google Scholar", "Áp dụng toán tử site: & filetype:pdf", "Trích dẫn Harvard style trong báo cáo"].map((c, i) => (
+              <div key={i} className="aspect-video rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 flex flex-col items-center justify-center text-primary/70 text-xs text-center p-3 gap-2">
+                <span className="text-2xl">🖼️</span>
+                <span>{c}</span>
+              </div>
+            ))}
+          </div>
+        </div>
         <a
           href={p2Pdf.url}
           target="_blank"
