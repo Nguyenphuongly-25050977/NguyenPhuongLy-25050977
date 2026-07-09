@@ -593,13 +593,56 @@ const PROJECTS: Project[] = [
 ];
 
 const EVIDENCE = [
-  { icon: "🗂️", title: "Cấu trúc thư mục", desc: "Ảnh chụp hệ thống thư mục môn học đã tổ chức." },
-  { icon: "🔍", title: "Kết quả tìm kiếm học thuật", desc: "Ảnh áp dụng toán tử site:, filetype:, intitle:..." },
-  { icon: "💡", title: "So sánh Prompt", desc: "Ảnh prompt ban đầu vs prompt cải tiến kèm kết quả." },
-  { icon: "📋", title: "Bảng quản lý công việc nhóm", desc: "Ảnh Trello/Notion phân công và theo dõi tiến độ." },
-  { icon: "🎥", title: "Sản phẩm AI sáng tạo", desc: "Ảnh/video sản phẩm số hoàn chỉnh." },
-  { icon: "🛡️", title: "Bộ nguyên tắc AI cá nhân", desc: "Ảnh 7 nguyên tắc sử dụng AI có trách nhiệm." },
+  {
+    icon: "🗂️",
+    title: "Cấu trúc thư mục & ghi chú",
+    desc: "Ảnh thao tác tạo thư mục môn học và file ghi chú Word đã lưu.",
+    img: p1NewFolder.url,
+    href: p1Docx.url,
+    fileLabel: "📄 GhiChuQuanTrong.docx",
+  },
+  {
+    icon: "🔍",
+    title: "Nguồn học thuật đã đánh giá",
+    desc: "Ảnh chụp nguồn học thuật + báo cáo tìm kiếm chuẩn Harvard.",
+    img: p2Src1.url,
+    href: p2Pdf.url,
+    fileLabel: "📄 BaoCaoTimKiemThongTin.pdf",
+  },
+  {
+    icon: "💡",
+    title: "Prompt cải tiến & kết quả AI",
+    desc: "So sánh prompt ban đầu vs prompt có vai trò, tiêu chí và định dạng.",
+    img: p3Src2.url,
+    href: p3Pdf.url,
+    fileLabel: "📄 BaoCao_DuAn3.pdf",
+  },
+  {
+    icon: "📋",
+    title: "Hợp tác nhóm trực tuyến",
+    desc: "Báo cáo phân công nhiệm vụ, biên bản họp và tiến độ dự án nhóm.",
+    img: null,
+    href: p4Pdf.url,
+    fileLabel: "📄 BaoCao_DuAn4.pdf",
+  },
+  {
+    icon: "🎥",
+    title: "Sản phẩm AI sáng tạo",
+    desc: "Infographic tổng hợp về AI trong học tập, hỗ trợ bởi ChatGPT & DALL·E.",
+    img: p5Img3.url,
+    href: p5Pdf.url,
+    fileLabel: "📄 BaoCao_DuAn5.pdf",
+  },
+  {
+    icon: "🛡️",
+    title: "Sử dụng AI có trách nhiệm",
+    desc: "Prompt lập dàn ý bài thuyết trình về AI trong chuyển đổi số tại Việt Nam.",
+    img: p6Img1.url,
+    href: p6Pdf.url,
+    fileLabel: "📄 BaoCao_DuAn6.pdf",
+  },
 ];
+
 
 const SKILLS = [
   { name: "Quản lý tệp và dữ liệu số", level: 90, use: "Tổ chức tài liệu học tập, đồng bộ đám mây" },
