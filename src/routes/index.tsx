@@ -11,6 +11,10 @@ import p3Pdf from "@/assets/project3/BaoCao_DuAn3.pdf.asset.json";
 import p4Pdf from "@/assets/project4/BaoCao_DuAn4.pdf.asset.json";
 import p4Docx from "@/assets/project4/BaoCao_DuAn4.docx.asset.json";
 import p4Docx2 from "@/assets/project4/BaoCao_DuAn4_v2.docx.asset.json";
+import p4Img1 from "@/assets/project4/p4-drive-empty.png.asset.json";
+import p4Img2 from "@/assets/project4/p4-trello.png.asset.json";
+import p4Img3 from "@/assets/project4/p4-drive-files.png.asset.json";
+import p4Img4 from "@/assets/project4/p4-discord.png.asset.json";
 import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
 import p5Docx from "@/assets/project5/BaoCao_DuAn5.docx.asset.json";
 import p5Img1 from "@/assets/project5/infographic1.png.asset.json";
@@ -389,12 +393,17 @@ const PROJECTS: Project[] = [
       <div className="mt-6 space-y-4">
         <div>
           <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng thực hành</div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {["Bảng Trello phân công nhiệm vụ", "Biên bản họp nhóm trên Notion", "Lịch nhóm trên Google Calendar"].map((c, i) => (
-              <div key={i} className="aspect-video rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 flex flex-col items-center justify-center text-primary/70 text-xs text-center p-3 gap-2">
-                <span className="text-2xl">🖼️</span>
-                <span>{c}</span>
-              </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { src: p4Img2.url, caption: "Bảng Trello phân công nhiệm vụ nhóm" },
+              { src: p4Img4.url, caption: "Trao đổi & chốt deadline trên Discord nhóm 36" },
+              { src: p4Img1.url, caption: "Thư mục Google Drive dùng chung của nhóm" },
+              { src: p4Img3.url, caption: "Tài liệu & slide thuyết trình nhóm 36 trên Drive" },
+            ].map((it, i) => (
+              <figure key={i} className="rounded-2xl overflow-hidden border border-primary/20 bg-primary/5">
+                <img src={it.src} alt={it.caption} loading="lazy" className="w-full h-auto block" />
+                <figcaption className="px-3 py-2 text-xs text-primary/80 text-center">{it.caption}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
