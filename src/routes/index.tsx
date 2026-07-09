@@ -505,13 +505,39 @@ function Portfolio() {
               👩‍🎓
             </div>
             <h3 className="text-center mt-5 text-xl font-bold">[Điền tên của bạn]</h3>
-            <p className="text-center text-sm text-muted-foreground">[Ngành học] · [Trường / Lớp]</p>
+            <p className="text-center text-sm text-muted-foreground">Sinh viên · Công nghệ số &amp; AI</p>
             <div className="mt-5 flex flex-wrap justify-center gap-2">
               {["Công nghệ số", "AI", "Nội dung số", "Teamwork", "Dữ liệu"].map((t) => (
                 <span key={t} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{t}</span>
               ))}
             </div>
+
+            {/* Info rows */}
+            <div className="mt-6 space-y-2.5">
+              {[
+                { icon: "🎓", label: "Ngành học", value: "Kinh Tế Quốc Tế" },
+                { icon: "📖", label: "Trường", value: "Đại học Kinh tế - ĐHQGHN" },
+                { icon: "📖", label: "Lớp", value: "Kinh Tế Quốc Tế 6" },
+                { icon: "✉️", label: "Liên hệ", value: "25051068@vnu.edu.vn" },
+              ].map((r) => (
+                <div
+                  key={r.label}
+                  className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-primary/5 border border-primary/15 hover:bg-primary/10 transition-colors"
+                >
+                  <span className="w-7 h-7 rounded-full bg-primary/15 text-primary flex items-center justify-center text-sm shrink-0">
+                    {r.icon}
+                  </span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary shrink-0">
+                    {r.label}
+                  </span>
+                  <span className="ml-auto text-sm font-semibold text-foreground text-right truncate">
+                    {r.value}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
+
 
           <div className="reveal space-y-5">
             <InfoBlock title="Sở thích cá nhân">
