@@ -1056,7 +1056,7 @@ function Portfolio() {
                   <h4 className="font-semibold mb-1">{e.title}</h4>
                   <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Dự án {i + 1}</span>
+                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Dự án {e.project}</span>
                     <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-primary hover:underline truncate">{e.fileLabel} →</a>
                   </div>
                 </div>
