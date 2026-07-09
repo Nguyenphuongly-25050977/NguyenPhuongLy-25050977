@@ -664,6 +664,15 @@ const EVIDENCE = [
   },
   {
     project: 4,
+    icon: "📎",
+    title: "Tài liệu bổ sung dự án nhóm (Word)",
+    desc: "File Word bổ sung minh chứng cho quá trình hợp tác nhóm trực tuyến.",
+    img: null,
+    href: p4Docx2.url,
+    fileLabel: "📎 BaoCao_DuAn4_v2.docx",
+  },
+  {
+    project: 4,
     icon: "🎬",
     title: "Video minh chứng nhóm (YouTube)",
     desc: "Video ghi lại quá trình hợp tác và trình bày sản phẩm của nhóm.",
