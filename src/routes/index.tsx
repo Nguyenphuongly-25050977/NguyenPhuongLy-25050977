@@ -9,6 +9,7 @@ import p1Docx from "@/assets/project1/GhiChuQuanTrong.docx.asset.json";
 import p2Pdf from "@/assets/project2/BaoCaoTimKiemThongTin.pdf.asset.json";
 import p3Pdf from "@/assets/project3/BaoCao_DuAn3.pdf.asset.json";
 import p4Pdf from "@/assets/project4/BaoCao_DuAn4.pdf.asset.json";
+import p4Docx from "@/assets/project4/BaoCao_DuAn4.docx.asset.json";
 import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
 import p5Docx from "@/assets/project5/BaoCao_DuAn5.docx.asset.json";
 import p5Img1 from "@/assets/project5/infographic1.png.asset.json";
@@ -650,6 +651,15 @@ const EVIDENCE = [
     img: null,
     href: p4Pdf.url,
     fileLabel: "📄 BaoCao_DuAn4.pdf",
+  },
+  {
+    project: 4,
+    icon: "📝",
+    title: "Báo cáo chi tiết dự án nhóm (Word)",
+    desc: "Bản Word đầy đủ: mục tiêu, phân công thành viên, tiến độ và kết quả cộng tác trực tuyến.",
+    img: null,
+    href: p4Docx.url,
+    fileLabel: "📎 BaoCao_DuAn4.docx",
   },
   {
     project: 5,
