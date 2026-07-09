@@ -148,8 +148,8 @@ const PROJECTS: Project[] = [
           <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt ban đầu</div>
           <p className="text-sm italic">“Giải thích về AI cho tôi.”</p>
         </div>
-        <div className="rounded-2xl p-5 bg-secondary/40 border border-border">
-          <div className="text-xs font-semibold text-secondary-foreground uppercase tracking-widest mb-2">Prompt cải tiến</div>
+        <div className="rounded-2xl p-5 bg-primary/15 border border-primary/30 green-glow">
+          <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt cải tiến</div>
           <p className="text-sm italic">
             “Với vai trò giảng viên môn Nhập môn CNS & AI, hãy giải thích khái niệm Trí tuệ nhân tạo cho sinh viên năm nhất
             trong 400–500 từ, kèm 2 ví dụ đời sống, phần kết luận nêu 3 lưu ý sử dụng có trách nhiệm. Trình bày theo mục đánh số.”
@@ -186,10 +186,10 @@ const PROJECTS: Project[] = [
     extra: (
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-sm border-collapse">
-          <thead className="bg-secondary/40 text-left">
+          <thead className="bg-primary/15 text-left">
             <tr>
               {["Thành viên", "Nhiệm vụ", "Hạn hoàn thành", "Trạng thái", "Ghi chú"].map((h) => (
-                <th key={h} className="p-3 border border-border font-semibold">{h}</th>
+                <th key={h} className="p-3 border border-border font-semibold text-primary">{h}</th>
               ))}
             </tr>
           </thead>
@@ -237,10 +237,10 @@ const PROJECTS: Project[] = [
     tags: ["AI tạo sinh", "Video", "Infographic"],
     progress: 100,
     extra: (
-      <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/30 to-accent/20 border border-border flex items-center justify-center text-center p-8">
+      <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
         <div>
           <div className="text-4xl mb-3">🎬</div>
-          <p className="font-semibold">Khu vực nhúng sản phẩm video / infographic</p>
+          <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
           <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
         </div>
       </div>
@@ -377,8 +377,8 @@ function Portfolio() {
         <div aria-hidden className="absolute inset-0 grid-bg opacity-70" />
         <div className="relative max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center">
           <div className="reveal">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/50 text-secondary-foreground text-xs font-semibold uppercase tracking-widest mb-6 glow-ring">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-xs font-semibold uppercase tracking-widest mb-6 green-glow">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               Nhập môn CNS &amp; AI · 2026
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
@@ -437,10 +437,10 @@ function Portfolio() {
 
           {/* Orbit visual */}
           <div className="reveal relative aspect-square max-w-md mx-auto w-full">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-secondary/40 to-accent/30 blur-3xl" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-primary/20 to-accent/30 blur-3xl" />
             {/* Orbit rings */}
-            <div className="absolute inset-6 rounded-full border border-dashed border-primary/40 spin-slow" />
-            <div className="absolute inset-16 rounded-full border border-dashed border-secondary/40 spin-reverse" />
+            <div className="absolute inset-6 rounded-full border border-dashed border-primary/50 spin-slow" />
+            <div className="absolute inset-16 rounded-full border border-dashed border-primary/30 spin-reverse" />
             {/* Orbiting chips */}
             {["📁", "🔎", "💬", "🤝", "🎨", "🛡️"].map((e, i) => {
               const angle = (i / 6) * Math.PI * 2;
@@ -450,7 +450,7 @@ function Portfolio() {
               return (
                 <div
                   key={e}
-                  className="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-card border border-border shadow-lg shadow-primary/20 flex items-center justify-center text-xl float-slow"
+                  className="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-card border border-primary/30 shadow-lg shadow-primary/30 flex items-center justify-center text-xl float-slow"
                   style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 0.4}s` }}
                 >
                   {e}
@@ -459,9 +459,9 @@ function Portfolio() {
             })}
             {/* Center core */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-card to-muted border border-border flex flex-col items-center justify-center text-center glow-ring">
+              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-card to-muted border border-primary/30 flex flex-col items-center justify-center text-center green-glow">
                 <div className="text-5xl">🤖</div>
-                <div className="text-[11px] uppercase tracking-widest text-muted-foreground mt-2">AI · Human</div>
+                <div className="text-[11px] uppercase tracking-widest text-primary mt-2">AI · Human</div>
               </div>
             </div>
           </div>
@@ -487,7 +487,7 @@ function Portfolio() {
                 "Tư duy phản biện",
                 "★",
               ].map((t, i) => (
-                <span key={`${k}-${i}`} className={i % 2 ? "text-secondary" : "text-foreground/70"}>
+                <span key={`${k}-${i}`} className={i % 2 ? "text-primary" : "text-foreground/70"}>
                   {t}
                 </span>
               )),
@@ -546,7 +546,7 @@ function Portfolio() {
                       </div>
                       <h3 className="text-xl font-semibold mb-2">{m.title}</h3>
                       <p className="text-sm text-muted-foreground mb-4">{m.desc}</p>
-                      <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-medium text-secondary group-hover:gap-2 transition-all">
+                      <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
                         Xem chi tiết <span>→</span>
                       </a>
                     </div>
@@ -594,14 +594,14 @@ function Portfolio() {
                   #0{i + 1}
                 </span>
               </div>
-              <div className="p-5">
-                <h4 className="font-semibold mb-1">{e.title}</h4>
-                <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] px-2 py-1 rounded-full bg-muted text-muted-foreground uppercase tracking-widest">Placeholder</span>
-                  <button className="text-sm font-semibold text-secondary hover:underline">Xem chi tiết →</button>
+                <div className="p-5">
+                  <h4 className="font-semibold mb-1">{e.title}</h4>
+                  <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Placeholder</span>
+                    <button className="text-sm font-semibold text-primary hover:underline">Xem chi tiết →</button>
+                  </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
@@ -658,11 +658,11 @@ function Portfolio() {
                 "Ứng dụng kỹ năng số vào học tập, nghiên cứu và công việc.",
                 "Sử dụng AI như công cụ hỗ trợ học tập có trách nhiệm.",
               ].map((t, i) => (
-                <li key={i} className="p-4 rounded-xl bg-secondary/20 border border-border">{t}</li>
+                <li key={i} className="p-4 rounded-xl bg-primary/10 border border-primary/20">{t}</li>
               ))}
             </ul>
           </div>
-          <blockquote className="reveal md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/15 to-accent/10 border border-border text-lg italic leading-relaxed">
+          <blockquote className="reveal md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 border border-primary/20 text-lg italic leading-relaxed green-spotlight">
             “Thông qua quá trình xây dựng Portfolio kỹ thuật số cá nhân, em không chỉ lưu trữ các sản phẩm học tập
             mà còn nhìn lại toàn bộ quá trình rèn luyện kỹ năng công nghệ số, tư duy phản biện và khả năng sử dụng AI
             có trách nhiệm. Portfolio giúp em hiểu rằng trong môi trường học tập hiện đại, công nghệ không chỉ là công
@@ -764,7 +764,7 @@ function ProjectCard({ p }: { p: Project }) {
         </div>
         <div className="flex flex-wrap gap-2">
           {p.tags.map((t) => (
-            <span key={t} className="text-xs px-3 py-1 rounded-full bg-secondary/40 text-secondary-foreground font-medium">{t}</span>
+            <span key={t} className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-medium border border-primary/20">{t}</span>
           ))}
         </div>
       </div>
@@ -796,7 +796,7 @@ function ProjectCard({ p }: { p: Project }) {
 
       {p.extra}
 
-      <div className="mt-6 aspect-[16/6] rounded-2xl bg-gradient-to-br from-muted via-secondary/20 to-accent/20 border border-dashed border-border flex items-center justify-center text-sm text-muted-foreground">
+      <div className="mt-6 aspect-[16/6] rounded-2xl bg-gradient-to-br from-primary/10 via-muted to-accent/20 border border-dashed border-primary/40 flex items-center justify-center text-sm text-primary font-medium green-spotlight">
         📷 Khu vực chèn ảnh minh chứng — thay bằng ảnh thật
       </div>
     </article>

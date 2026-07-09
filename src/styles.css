@@ -63,76 +63,77 @@
 
 :root {
   --green: #0F3C3F;
+  --green-bright: #1A7A7D;
   --red: #930F1D;
 
   --radius: 1rem;
-  --background: oklch(from var(--green) 0.97 0.02 h);
+  --background: oklch(from var(--green) 0.97 0.04 h);
   --foreground: var(--green);
   --card: oklch(1 0 0);
   --card-foreground: var(--green);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--green);
-  --primary: var(--green);
+  --primary: var(--green-bright);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: var(--red);
   --secondary-foreground: oklch(0.99 0 0);
-  --muted: oklch(from var(--green) 0.94 0.02 h);
-  --muted-foreground: oklch(from var(--green) 0.5 c h);
-  --accent: oklch(from var(--green) 0.9 0.03 h);
+  --muted: oklch(from var(--green) 0.94 0.04 h);
+  --muted-foreground: oklch(from var(--green) 0.45 0.08 h);
+  --accent: oklch(from var(--green) 0.88 0.07 h);
   --accent-foreground: var(--green);
   --destructive: var(--red);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(from var(--green) 0.88 0.02 h);
-  --input: oklch(from var(--green) 0.92 0.015 h);
-  --ring: var(--green);
-  --chart-1: var(--green);
+  --border: oklch(from var(--green) 0.86 0.05 h);
+  --input: oklch(from var(--green) 0.92 0.03 h);
+  --ring: var(--green-bright);
+  --chart-1: var(--green-bright);
   --chart-2: var(--red);
-  --chart-3: oklch(from var(--green) 0.8 0.05 h);
+  --chart-3: oklch(from var(--green) 0.75 0.09 h);
   --chart-4: oklch(from var(--red) 0.75 0.06 h);
-  --chart-5: oklch(from var(--green) 0.7 0.04 h);
-  --sidebar: oklch(from var(--green) 0.98 0.01 h);
+  --chart-5: oklch(from var(--green) 0.65 0.08 h);
+  --sidebar: oklch(from var(--green) 0.98 0.02 h);
   --sidebar-foreground: var(--green);
-  --sidebar-primary: var(--green);
+  --sidebar-primary: var(--green-bright);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(from var(--green) 0.9 0.03 h);
+  --sidebar-accent: oklch(from var(--green) 0.88 0.07 h);
   --sidebar-accent-foreground: var(--green);
-  --sidebar-border: oklch(from var(--green) 0.88 0.02 h);
-  --sidebar-ring: var(--green);
+  --sidebar-border: oklch(from var(--green) 0.86 0.05 h);
+  --sidebar-ring: var(--green-bright);
 }
 
 .dark {
-  --background: oklch(from var(--green) 0.15 c h);
+  --background: oklch(from var(--green) 0.15 0.06 h);
   --foreground: oklch(0.95 0 0);
-  --card: oklch(from var(--green) 0.2 c h);
+  --card: oklch(from var(--green) 0.2 0.06 h);
   --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(from var(--green) 0.2 c h);
+  --popover: oklch(from var(--green) 0.2 0.06 h);
   --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(from var(--green) 0.7 c h);
-  --primary-foreground: oklch(from var(--green) 0.15 c h);
+  --primary: oklch(from var(--green) 0.65 0.12 h);
+  --primary-foreground: oklch(from var(--green) 0.12 0.05 h);
   --secondary: oklch(from var(--red) 0.65 c h);
   --secondary-foreground: oklch(0.99 0 0);
-  --muted: oklch(from var(--green) 0.25 c h);
-  --muted-foreground: oklch(from var(--green) 0.7 c h);
-  --accent: oklch(from var(--green) 0.25 c h);
+  --muted: oklch(from var(--green) 0.25 0.08 h);
+  --muted-foreground: oklch(from var(--green) 0.75 0.09 h);
+  --accent: oklch(from var(--green) 0.28 0.1 h);
   --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(from var(--red) 0.6 c h);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(from var(--green) 0.3 c h / 30%);
-  --input: oklch(from var(--green) 0.25 c h / 40%);
-  --ring: oklch(from var(--green) 0.6 c h);
-  --chart-1: oklch(from var(--green) 0.7 c h);
+  --border: oklch(from var(--green) 0.35 0.08 h / 40%);
+  --input: oklch(from var(--green) 0.28 0.07 h / 50%);
+  --ring: oklch(from var(--green) 0.65 0.12 h);
+  --chart-1: oklch(from var(--green) 0.65 0.12 h);
   --chart-2: oklch(from var(--red) 0.65 c h);
-  --chart-3: oklch(from var(--green) 0.6 c h);
+  --chart-3: oklch(from var(--green) 0.55 0.11 h);
   --chart-4: oklch(from var(--red) 0.55 c h);
-  --chart-5: oklch(from var(--green) 0.5 c h);
-  --sidebar: oklch(from var(--green) 0.2 c h);
+  --chart-5: oklch(from var(--green) 0.45 0.1 h);
+  --sidebar: oklch(from var(--green) 0.2 0.06 h);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(from var(--green) 0.7 c h);
-  --sidebar-primary-foreground: oklch(from var(--green) 0.15 c h);
-  --sidebar-accent: oklch(from var(--green) 0.25 c h);
+  --sidebar-primary: oklch(from var(--green) 0.65 0.12 h);
+  --sidebar-primary-foreground: oklch(from var(--green) 0.12 0.05 h);
+  --sidebar-accent: oklch(from var(--green) 0.28 0.1 h);
   --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(from var(--green) 0.3 c h / 30%);
-  --sidebar-ring: oklch(from var(--green) 0.6 c h);
+  --sidebar-border: oklch(from var(--green) 0.35 0.08 h / 40%);
+  --sidebar-ring: oklch(from var(--green) 0.65 0.12 h);
 }
 
 @layer base {
@@ -146,8 +147,10 @@
 
   body {
     background:
-      radial-gradient(circle at 10% 0%, oklch(from var(--green) 0.92 0.04 h / 35%) 0%, transparent 45%),
-      radial-gradient(circle at 90% 20%, oklch(from var(--red) 0.9 0.05 h / 20%) 0%, transparent 40%),
+      radial-gradient(circle at 8% 0%, oklch(from var(--green) 0.88 0.09 h / 45%) 0%, transparent 42%),
+      radial-gradient(circle at 92% 10%, oklch(from var(--green-bright) 0.8 0.12 h / 28%) 0%, transparent 38%),
+      radial-gradient(circle at 50% 100%, oklch(from var(--green) 0.92 0.06 h / 30%) 0%, transparent 50%),
+      radial-gradient(circle at 90% 20%, oklch(from var(--red) 0.9 0.05 h / 18%) 0%, transparent 40%),
       var(--color-background);
     color: var(--color-foreground);
     font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
@@ -222,18 +225,19 @@
 
 @utility grid-bg {
   background-image:
-    linear-gradient(oklch(from var(--green) 0.5 c h / 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(from var(--green) 0.5 c h / 0.08) 1px, transparent 1px);
+    linear-gradient(oklch(from var(--green-bright) 0.55 0.1 h / 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(from var(--green-bright) 0.55 0.1 h / 0.14) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
 }
 
 @utility text-shimmer {
   background: linear-gradient(90deg,
-    var(--foreground) 0%,
-    oklch(from var(--red) 0.55 c h) 45%,
-    var(--foreground) 60%);
-  background-size: 200% auto;
+    oklch(from var(--green) 0.5 0.1 h) 0%,
+    oklch(from var(--green-bright) 0.7 0.14 h) 35%,
+    oklch(from var(--red) 0.55 c h) 55%,
+    oklch(from var(--green) 0.5 0.1 h) 70%);
+  background-size: 250% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -242,17 +246,31 @@
 
 @utility glow-ring {
   box-shadow:
-    0 0 0 1px oklch(from var(--green) 0.7 c h / 0.4),
-    0 0 40px 0 oklch(from var(--green) 0.6 c h / 0.35),
+    0 0 0 1px oklch(from var(--green-bright) 0.7 0.12 h / 0.55),
+    0 0 40px 0 oklch(from var(--green-bright) 0.65 0.14 h / 0.45),
     0 0 90px -10px oklch(from var(--red) 0.6 c h / 0.3);
 }
 
 @utility tape {
   background: repeating-linear-gradient(
     45deg,
-    oklch(from var(--red) 0.65 c h / 0.15),
-    oklch(from var(--red) 0.65 c h / 0.15) 10px,
+    oklch(from var(--green-bright) 0.65 0.1 h / 0.22),
+    oklch(from var(--green-bright) 0.65 0.1 h / 0.22) 10px,
     transparent 10px,
     transparent 20px
   );
+}
+
+@utility green-spotlight {
+  background:
+    radial-gradient(circle at 20% 20%, oklch(from var(--green-bright) 0.75 0.13 h / 0.22) 0%, transparent 35%),
+    radial-gradient(circle at 80% 80%, oklch(from var(--green) 0.85 0.08 h / 0.18) 0%, transparent 40%),
+    var(--color-card);
+}
+
+@utility green-glow {
+  box-shadow:
+    0 0 0 1px oklch(from var(--green-bright) 0.7 0.12 h / 0.35),
+    0 8px 32px -8px oklch(from var(--green-bright) 0.6 0.14 h / 0.35),
+    inset 0 1px 0 oklch(from var(--green-bright) 0.85 0.08 h / 0.25);
 }
