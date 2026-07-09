@@ -11,6 +11,10 @@ import p3Pdf from "@/assets/project3/BaoCao_DuAn3.pdf.asset.json";
 import p4Pdf from "@/assets/project4/BaoCao_DuAn4.pdf.asset.json";
 import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
 import p6Pdf from "@/assets/project6/BaoCao_DuAn6.pdf.asset.json";
+import p2Src1 from "@/assets/project2/nguon14.png.asset.json";
+import p2Src2 from "@/assets/project2/nguon15.png.asset.json";
+import p2Src3 from "@/assets/project2/nguon16.png.asset.json";
+import p2Src4 from "@/assets/project2/nguon17.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -216,13 +220,18 @@ const PROJECTS: Project[] = [
           </table>
         </div>
         <div>
-          <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng thực hành</div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {["Tìm kiếm nâng cao trên Google Scholar", "Áp dụng toán tử site: & filetype:pdf", "Trích dẫn Harvard style trong báo cáo"].map((c, i) => (
-              <div key={i} className="aspect-video rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 flex flex-col items-center justify-center text-primary/70 text-xs text-center p-3 gap-2">
-                <span className="text-2xl">🖼️</span>
-                <span>{c}</span>
-              </div>
+          <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng nguồn học thuật</div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { src: p2Src1.url, cap: "Tạp chí Khoa học Giáo dục Việt Nam – Lê Anh Vinh & Trần Mỹ Ngọc (VNIES)" },
+              { src: p2Src2.url, cap: "Tạp chí Công Thương – bài về trách nhiệm pháp lý & đạo đức AI trong giáo dục" },
+              { src: p2Src3.url, cap: "European Journal of Education (Wiley) – Selwyn, N. (2022)" },
+              { src: p2Src4.url, cap: "AIES ’20 – Zhang & Dafoe (2020), Oxford – AI Governance" },
+            ].map((it, i) => (
+              <figure key={i} className="rounded-2xl overflow-hidden border border-border bg-card group">
+                <img src={it.src} alt={it.cap} loading="lazy" className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <figcaption className="p-3 text-xs text-muted-foreground">{it.cap}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
