@@ -1000,42 +1000,105 @@ function Portfolio() {
         </div>
       </Section>
 
-      {/* ========== Overview timeline ========== */}
+      {/* ========== Overview – Logical Roadmap ========== */}
       <Section id="overview" eyebrow="Project Overview" title="Hành trình 6 nhiệm vụ">
-        <div className="relative">
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-accent" />
-          <div className="space-y-10">
-            {MISSIONS.map((m, i) => {
-              const right = i % 2 === 1;
-              return (
-                <div key={m.n} className="reveal md:grid md:grid-cols-9 md:gap-6 items-center relative">
-                  <div className={`md:col-span-4 ${right ? "md:order-3" : ""}`}>
-                    <div className={`group rounded-3xl p-6 bg-card border border-border hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-1 transition-all ${right ? "md:text-left" : "md:text-right"}`}>
-                      <div className={`flex items-center gap-3 mb-3 ${right ? "md:justify-start" : "md:justify-end"}`}>
-                        <span className="text-3xl">{m.icon}</span>
-                        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary px-2 py-1 rounded-full bg-primary/10">Nhiệm vụ {m.n}</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">{m.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-4">{m.desc}</p>
-                      <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
-                        Xem chi tiết <span>→</span>
-                      </a>
-                    </div>
-                  </div>
-                  {/* Center node */}
-                  <div className="hidden md:flex md:col-span-1 md:order-2 justify-center">
-                    <div className="relative w-14 h-14 rounded-full bg-background border-2 border-primary flex items-center justify-center font-black text-primary shadow-lg shadow-primary/20">
-                      {m.n}
-                      <span className="absolute inset-0 rounded-full border-2 border-secondary/40 animate-ping" />
-                    </div>
-                  </div>
-                  <div className={`hidden md:block md:col-span-4 ${right ? "md:order-1" : ""}`} />
+        {(() => {
+          const PHASES = [
+            { key: "P1", label: "Nền tảng số", range: "Nhiệm vụ 1 – 2", desc: "Tổ chức dữ liệu & tra cứu học thuật.", missions: [1, 2] },
+            { key: "P2", label: "Làm chủ AI", range: "Nhiệm vụ 3 – 4", desc: "Prompting hiệu quả & cộng tác nhóm.", missions: [3, 4] },
+            { key: "P3", label: "Sáng tạo & Đạo đức", range: "Nhiệm vụ 5 – 6", desc: "Ứng dụng AI có trách nhiệm.", missions: [5, 6] },
+          ];
+          const phaseOf = (n: number) => PHASES.findIndex((p) => p.missions.includes(n));
+          const skillOf = (n: number) => ["Quản lý dữ liệu", "Tư duy phản biện", "Prompt Engineering", "Cộng tác số", "AI Tạo sinh", "Đạo đức AI"][n - 1];
+          return (
+            <div className="space-y-10">
+              {/* Progress rail */}
+              <div className="reveal rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6">
+                <div className="flex items-center justify-between mb-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                  <span>Lộ trình học tập</span>
+                  <span className="text-primary">6 / 6 hoàn thành</span>
                 </div>
-              );
-            })}
-          </div>
-        </div>
+                <div className="relative">
+                  <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-gradient-to-r from-primary via-secondary to-accent rounded-full" />
+                  <ol className="relative grid grid-cols-6 gap-2">
+                    {MISSIONS.map((m) => {
+                      const pi = phaseOf(m.n);
+                      const tone = pi === 0 ? "bg-primary text-primary-foreground border-primary" : pi === 1 ? "bg-secondary text-secondary-foreground border-secondary" : "bg-accent text-accent-foreground border-accent";
+                      return (
+                        <li key={m.n} className="flex flex-col items-center gap-2">
+                          <a href={`#mission-${m.n}`} className={`relative z-10 w-10 h-10 rounded-full border-2 flex items-center justify-center font-black text-sm shadow-md ${tone} hover:scale-110 transition-transform`}>
+                            {m.n}
+                          </a>
+                          <span className="hidden sm:block text-[10px] uppercase tracking-widest text-muted-foreground">P{pi + 1}</span>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+                <div className="grid sm:grid-cols-3 gap-3 mt-6">
+                  {PHASES.map((p, i) => {
+                    const tone = i === 0 ? "border-primary/30 bg-primary/5" : i === 1 ? "border-secondary/30 bg-secondary/5" : "border-accent/30 bg-accent/5";
+                    const dot = i === 0 ? "bg-primary" : i === 1 ? "bg-secondary" : "bg-accent";
+                    return (
+                      <div key={p.key} className={`rounded-xl border p-4 ${tone}`}>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className={`w-2.5 h-2.5 rounded-full ${dot}`} />
+                          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground">Giai đoạn {i + 1}</span>
+                        </div>
+                        <div className="font-semibold text-sm">{p.label}</div>
+                        <div className="text-xs text-muted-foreground mt-0.5">{p.range}</div>
+                        <div className="text-xs text-muted-foreground mt-2">{p.desc}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Mission grid */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {MISSIONS.map((m) => {
+                  const pi = phaseOf(m.n);
+                  const ring = pi === 0 ? "ring-primary/30 hover:ring-primary/60" : pi === 1 ? "ring-secondary/30 hover:ring-secondary/60" : "ring-accent/30 hover:ring-accent/60";
+                  const numTone = pi === 0 ? "bg-primary/10 text-primary" : pi === 1 ? "bg-secondary/15 text-secondary-foreground" : "bg-accent/15 text-accent-foreground";
+                  const phaseLabel = ["Nền tảng", "Làm chủ AI", "Đạo đức"][pi];
+                  return (
+                    <article
+                      id={`mission-${m.n}`}
+                      key={m.n}
+                      className={`reveal group relative rounded-2xl bg-card border border-border p-5 ring-1 ${ring} hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all flex flex-col`}
+                    >
+                      <div className="flex items-start justify-between gap-3 mb-4">
+                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg ${numTone}`}>
+                          {String(m.n).padStart(2, "0")}
+                        </div>
+                        <div className="flex flex-col items-end gap-1">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">Giai đoạn {pi + 1}</span>
+                          <span className="text-[10px] font-semibold uppercase tracking-widest text-primary px-2 py-0.5 rounded-full bg-primary/10">{phaseLabel}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-2xl">{m.icon}</span>
+                        <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Nhiệm vụ {m.n}</span>
+                      </div>
+                      <h3 className="text-base font-semibold leading-snug mb-2 line-clamp-3">{m.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4 flex-1">{m.desc}</p>
+                      <div className="flex items-center justify-between pt-3 border-t border-border/60">
+                        <span className="text-[11px] font-medium text-muted-foreground">
+                          <span className="text-foreground/80">Kỹ năng:</span> {skillOf(m.n)}
+                        </span>
+                        <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                          Chi tiết <span>→</span>
+                        </a>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
       </Section>
+
 
 
       {/* ========== Projects ========== */}
