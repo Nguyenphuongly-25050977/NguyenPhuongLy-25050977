@@ -957,9 +957,6 @@ function ProjectCard({ p }: { p: Project }) {
         <Field label="🔍 Phân tích kết quả">
           <ul className="list-disc pl-5 space-y-1">{p.analysis.map((s, i) => <li key={i}>{s}</li>)}</ul>
         </Field>
-        <Field label="💡 Bài học rút ra">
-          <ul className="list-disc pl-5 space-y-1">{p.lesson.map((s, i) => <li key={i}>{s}</li>)}</ul>
-        </Field>
       </div>
 
       <div className="mt-8">
