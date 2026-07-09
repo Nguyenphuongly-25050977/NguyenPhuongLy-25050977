@@ -7,6 +7,10 @@ import p1GhiChu from "@/assets/project1/ghichu-file.png.asset.json";
 import p1CopyMenu from "@/assets/project1/copy-menu.png.asset.json";
 import p1Docx from "@/assets/project1/GhiChuQuanTrong.docx.asset.json";
 import p2Pdf from "@/assets/project2/BaoCaoTimKiemThongTin.pdf.asset.json";
+import p3Pdf from "@/assets/project3/BaoCao_DuAn3.pdf.asset.json";
+import p4Pdf from "@/assets/project4/BaoCao_DuAn4.pdf.asset.json";
+import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
+import p6Pdf from "@/assets/project6/BaoCao_DuAn6.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -265,18 +269,23 @@ const PROJECTS: Project[] = [
       "Phần phân tích so sánh phản ánh nhận xét cá nhân trung thực.",
     ],
     extra: (
-      <div className="mt-6 grid md:grid-cols-2 gap-4">
-        <div className="rounded-2xl p-5 bg-muted/60 border border-border">
-          <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt ban đầu</div>
-          <p className="text-sm italic">“Giải thích về AI cho tôi.”</p>
+      <div className="mt-6 space-y-4">
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="rounded-2xl p-5 bg-muted/60 border border-border">
+            <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt ban đầu</div>
+            <p className="text-sm italic">“Giải thích về AI cho tôi.”</p>
+          </div>
+          <div className="rounded-2xl p-5 bg-primary/15 border border-primary/30 green-glow">
+            <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt cải tiến</div>
+            <p className="text-sm italic">
+              “Với vai trò giảng viên môn Nhập môn CNS & AI, hãy giải thích khái niệm Trí tuệ nhân tạo cho sinh viên năm nhất
+              trong 400–500 từ, kèm 2 ví dụ đời sống, phần kết luận nêu 3 lưu ý sử dụng có trách nhiệm. Trình bày theo mục đánh số.”
+            </p>
+          </div>
         </div>
-        <div className="rounded-2xl p-5 bg-primary/15 border border-primary/30 green-glow">
-          <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt cải tiến</div>
-          <p className="text-sm italic">
-            “Với vai trò giảng viên môn Nhập môn CNS & AI, hãy giải thích khái niệm Trí tuệ nhân tạo cho sinh viên năm nhất
-            trong 400–500 từ, kèm 2 ví dụ đời sống, phần kết luận nêu 3 lưu ý sử dụng có trách nhiệm. Trình bày theo mục đánh số.”
-          </p>
-        </div>
+        <a href={p3Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn3.pdf
+        </a>
       </div>
     ),
   },
@@ -324,28 +333,33 @@ const PROJECTS: Project[] = [
       "Không chỉnh sửa số liệu tiến độ để làm đẹp báo cáo.",
     ],
     extra: (
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full text-sm border-collapse">
-          <thead className="bg-primary/15 text-left">
-            <tr>
-              {["Thành viên", "Nhiệm vụ", "Hạn hoàn thành", "Trạng thái", "Ghi chú"].map((h) => (
-                <th key={h} className="p-3 border border-border font-semibold text-primary">{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="bg-card/60">
-            {[
-              ["An", "Thiết kế giao diện", "20/12", "Hoàn thành", "Đã review"],
-              ["Bình", "Viết nội dung", "22/12", "Đang làm", "Cần bổ sung ví dụ"],
-              ["Chi", "Tổng hợp minh chứng", "24/12", "Cần chỉnh sửa", "Thiếu ảnh Prompt"],
-              ["Dũng", "Kiểm tra & xuất bản", "26/12", "Chưa làm", "Chờ nhóm hoàn tất"],
-            ].map((row, i) => (
-              <tr key={i} className="hover:bg-secondary/20 transition">
-                {row.map((c, j) => <td key={j} className="p-3 border border-border">{c}</td>)}
+      <div className="mt-6 space-y-4">
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead className="bg-primary/15 text-left">
+              <tr>
+                {["Thành viên", "Nhiệm vụ", "Hạn hoàn thành", "Trạng thái", "Ghi chú"].map((h) => (
+                  <th key={h} className="p-3 border border-border font-semibold text-primary">{h}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="bg-card/60">
+              {[
+                ["An", "Thiết kế giao diện", "20/12", "Hoàn thành", "Đã review"],
+                ["Bình", "Viết nội dung", "22/12", "Đang làm", "Cần bổ sung ví dụ"],
+                ["Chi", "Tổng hợp minh chứng", "24/12", "Cần chỉnh sửa", "Thiếu ảnh Prompt"],
+                ["Dũng", "Kiểm tra & xuất bản", "26/12", "Chưa làm", "Chờ nhóm hoàn tất"],
+              ].map((row, i) => (
+                <tr key={i} className="hover:bg-secondary/20 transition">
+                  {row.map((c, j) => <td key={j} className="p-3 border border-border">{c}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <a href={p4Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn4.pdf
+        </a>
       </div>
     ),
   },
@@ -395,12 +409,17 @@ const PROJECTS: Project[] = [
       "Không dùng AI để giả mạo giọng nói hoặc hình ảnh người thật.",
     ],
     extra: (
-      <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
-        <div>
-          <div className="text-4xl mb-3">🎬</div>
-          <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
-          <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
+      <div className="mt-6 space-y-4">
+        <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
+          <div>
+            <div className="text-4xl mb-3">🎬</div>
+            <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
+            <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
+          </div>
         </div>
+        <a href={p5Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn5.pdf
+        </a>
       </div>
     ),
   },
@@ -447,21 +466,26 @@ const PROJECTS: Project[] = [
       "Tôi tự chịu trách nhiệm áp dụng các nguyên tắc này trong học tập.",
     ],
     extra: (
-      <div className="mt-6 grid md:grid-cols-2 gap-3">
-        {[
-          "Không dùng AI để gian lận hoặc làm thay toàn bộ bài tập.",
-          "Luôn kiểm chứng thông tin do AI cung cấp.",
-          "Ghi rõ khi có sử dụng AI trong quá trình học tập.",
-          "Không nhập dữ liệu cá nhân hoặc thông tin nhạy cảm vào AI.",
-          "Không sao chép nguyên văn nội dung AI nếu chưa kiểm tra và chỉnh sửa.",
-          "Sử dụng AI để hỗ trợ tư duy, không thay thế tư duy.",
-          "Chịu trách nhiệm cuối cùng với sản phẩm học tập của bản thân.",
-        ].map((t, i) => (
-          <div key={i} className="flex gap-3 items-start p-4 rounded-xl bg-accent/30 border border-border">
-            <span className="text-primary font-bold">{i + 1}.</span>
-            <span className="text-sm">{t}</span>
-          </div>
-        ))}
+      <div className="mt-6 space-y-4">
+        <div className="grid md:grid-cols-2 gap-3">
+          {[
+            "Không dùng AI để gian lận hoặc làm thay toàn bộ bài tập.",
+            "Luôn kiểm chứng thông tin do AI cung cấp.",
+            "Ghi rõ khi có sử dụng AI trong quá trình học tập.",
+            "Không nhập dữ liệu cá nhân hoặc thông tin nhạy cảm vào AI.",
+            "Không sao chép nguyên văn nội dung AI nếu chưa kiểm tra và chỉnh sửa.",
+            "Sử dụng AI để hỗ trợ tư duy, không thay thế tư duy.",
+            "Chịu trách nhiệm cuối cùng với sản phẩm học tập của bản thân.",
+          ].map((t, i) => (
+            <div key={i} className="flex gap-3 items-start p-4 rounded-xl bg-accent/30 border border-border">
+              <span className="text-primary font-bold">{i + 1}.</span>
+              <span className="text-sm">{t}</span>
+            </div>
+          ))}
+        </div>
+        <a href={p6Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn6.pdf
+        </a>
       </div>
     ),
   },
