@@ -573,9 +573,6 @@ const PROJECTS: Project[] = [
           </div>
         </div>
         <div className="flex flex-wrap gap-3">
-          <a href={p6Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
-            📄 Xem báo cáo đầy đủ: BaoCao_DuAn6.pdf
-          </a>
           <a href={p6Docx.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
             📎 Minh chứng bổ sung: BaoCao_DuAn6.docx
           </a>
