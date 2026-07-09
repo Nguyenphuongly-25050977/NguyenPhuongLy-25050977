@@ -527,6 +527,17 @@ const PROJECTS: Project[] = [
             </div>
           ))}
         </div>
+        <div>
+          <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng thực hành</div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {["Bộ 7 nguyên tắc AI dán tại bàn học", "Bảng phân tích 5 rủi ro đạo đức", "Đối chiếu với quy định nhà trường"].map((c, i) => (
+              <div key={i} className="aspect-video rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 flex flex-col items-center justify-center text-primary/70 text-xs text-center p-3 gap-2">
+                <span className="text-2xl">🖼️</span>
+                <span>{c}</span>
+              </div>
+            ))}
+          </div>
+        </div>
         <a href={p6Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
           📄 Xem báo cáo đầy đủ: BaoCao_DuAn6.pdf
         </a>
