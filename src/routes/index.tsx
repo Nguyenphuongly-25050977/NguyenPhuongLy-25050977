@@ -504,7 +504,7 @@ function Portfolio() {
             <div className="w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-5xl">
               👩‍🎓
             </div>
-            <h3 className="text-center mt-5 text-xl font-bold">[Điền tên của bạn]</h3>
+            <h3 className="text-center mt-5 text-xl font-bold">Họ Và Tên:Nguyễn Phương Ly</h3>
             <p className="text-center text-sm text-muted-foreground">Sinh viên · Công nghệ số &amp; AI</p>
             <div className="mt-5 flex flex-wrap justify-center gap-2">
               {["Công nghệ số", "AI", "Nội dung số", "Teamwork", "Dữ liệu"].map((t) => (
@@ -515,10 +515,10 @@ function Portfolio() {
             {/* Info rows */}
             <div className="mt-6 space-y-2.5">
               {[
-                { icon: "🎓", label: "Ngành học", value: "Kinh Tế Quốc Tế" },
+                { icon: "🎓", label: "KHOA", value: "Kinh Tế và Kinh Doanh Quốc Tế" },
                 { icon: "📖", label: "Trường", value: "Đại học Kinh tế - ĐHQGHN" },
                 { icon: "📖", label: "Lớp", value: "Kinh Tế Quốc Tế 6" },
-                { icon: "✉️", label: "Liên hệ", value: "25051068@vnu.edu.vn" },
+                { icon: "✉️", label: "Liên hệ", value: "25050977@vnu.edu.vn" },
               ].map((r) => (
                 <div
                   key={r.label}
@@ -711,7 +711,7 @@ function Portfolio() {
           <div>
             <div className="font-semibold mb-2">Thông tin</div>
             <ul className="space-y-1 text-muted-foreground">
-              <li>Sinh viên: [Điền tên]</li>
+              <li>Sinh viên: Nguyễn Phương Ly</li>
               <li>Môn học: Nhập môn CNS & Ứng dụng AI</li>
               <li>Năm học: 2025 – 2026</li>
             </ul>
@@ -719,8 +719,8 @@ function Portfolio() {
           <div>
             <div className="font-semibold mb-2">Liên hệ</div>
             <ul className="space-y-1 text-muted-foreground">
-              <li>Email: yourname@example.edu.vn</li>
-              <li>Trường: [Điền trường]</li>
+              <li>Email:25050977@vnu.edu.vn</li>
+              <li>Trường:Đại học Kinh tế - ĐHQGHN</li>
             </ul>
           </div>
         </div>
