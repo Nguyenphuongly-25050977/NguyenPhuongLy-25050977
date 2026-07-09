@@ -148,8 +148,8 @@ const PROJECTS: Project[] = [
           <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt ban đầu</div>
           <p className="text-sm italic">“Giải thích về AI cho tôi.”</p>
         </div>
-        <div className="rounded-2xl p-5 bg-secondary/40 border border-border">
-          <div className="text-xs font-semibold text-secondary-foreground uppercase tracking-widest mb-2">Prompt cải tiến</div>
+        <div className="rounded-2xl p-5 bg-primary/15 border border-primary/30 green-glow">
+          <div className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Prompt cải tiến</div>
           <p className="text-sm italic">
             “Với vai trò giảng viên môn Nhập môn CNS & AI, hãy giải thích khái niệm Trí tuệ nhân tạo cho sinh viên năm nhất
             trong 400–500 từ, kèm 2 ví dụ đời sống, phần kết luận nêu 3 lưu ý sử dụng có trách nhiệm. Trình bày theo mục đánh số.”
