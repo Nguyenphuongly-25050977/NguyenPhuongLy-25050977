@@ -504,7 +504,7 @@ function Portfolio() {
             <div className="w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-5xl">
               👩‍🎓
             </div>
-            <h3 className="text-center mt-5 text-xl font-bold">Họ Và Tên:Nguyễn Phương Ly</h3>
+            <h3 className="text-center mt-5 text-xl font-bold">Họ Và Tên: Nguyễn Phương Ly</h3>
             <p className="text-center text-sm text-muted-foreground">Sinh viên · Công nghệ số &amp; AI</p>
             <div className="mt-5 flex flex-wrap justify-center gap-2">
               {["Công nghệ số", "AI", "Nội dung số", "Teamwork", "Dữ liệu"].map((t) => (
