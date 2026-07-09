@@ -6,6 +6,7 @@ import p1NewFolder from "@/assets/project1/new-folder.png.asset.json";
 import p1GhiChu from "@/assets/project1/ghichu-file.png.asset.json";
 import p1CopyMenu from "@/assets/project1/copy-menu.png.asset.json";
 import p1Docx from "@/assets/project1/GhiChuQuanTrong.docx.asset.json";
+import p2Pdf from "@/assets/project2/BaoCaoTimKiemThongTin.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
