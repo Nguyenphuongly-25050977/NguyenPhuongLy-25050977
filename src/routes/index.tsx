@@ -20,6 +20,7 @@ import p6Pdf from "@/assets/project6/BaoCao_DuAn6.pdf.asset.json";
 import p6Docx from "@/assets/project6/BaoCao_DuAn6.docx.asset.json";
 import p6Img1 from "@/assets/project6/prompt-danyai.png.asset.json";
 import p6Img2 from "@/assets/project6/prompt-loiich.png.asset.json";
+import p6Poster from "@/assets/project6/ai-trach-nhiem-poster.png.asset.json";
 
 import p2Src1 from "@/assets/project2/nguon14.png.asset.json";
 import p2Src2 from "@/assets/project2/nguon15.png.asset.json";
@@ -558,6 +559,7 @@ const PROJECTS: Project[] = [
             {[
               { src: p6Img1.url, caption: "Prompt lập dàn ý bài thuyết trình về AI trong chuyển đổi số" },
               { src: p6Img2.url, caption: "Prompt viết đoạn 300 từ về lợi ích của AI (kèm đầu ra minh họa)" },
+              { src: p6Poster.url, caption: "Poster: Sử dụng AI có trách nhiệm trong học thuật" },
             ].map((it, i) => (
               <figure key={i} className="rounded-2xl border border-primary/30 bg-primary/5 overflow-hidden">
                 <img src={it.src} alt={it.caption} className="w-full aspect-video object-cover" />
