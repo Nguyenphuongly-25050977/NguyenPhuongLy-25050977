@@ -658,11 +658,11 @@ function Portfolio() {
                 "Ứng dụng kỹ năng số vào học tập, nghiên cứu và công việc.",
                 "Sử dụng AI như công cụ hỗ trợ học tập có trách nhiệm.",
               ].map((t, i) => (
-                <li key={i} className="p-4 rounded-xl bg-secondary/20 border border-border">{t}</li>
+                <li key={i} className="p-4 rounded-xl bg-primary/10 border border-primary/20">{t}</li>
               ))}
             </ul>
           </div>
-          <blockquote className="reveal md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/15 to-accent/10 border border-border text-lg italic leading-relaxed">
+          <blockquote className="reveal md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 border border-primary/20 text-lg italic leading-relaxed green-spotlight">
             “Thông qua quá trình xây dựng Portfolio kỹ thuật số cá nhân, em không chỉ lưu trữ các sản phẩm học tập
             mà còn nhìn lại toàn bộ quá trình rèn luyện kỹ năng công nghệ số, tư duy phản biện và khả năng sử dụng AI
             có trách nhiệm. Portfolio giúp em hiểu rằng trong môi trường học tập hiện đại, công nghệ không chỉ là công
