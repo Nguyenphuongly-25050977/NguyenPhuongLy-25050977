@@ -962,7 +962,54 @@ function ProjectCard({ p }: { p: Project }) {
         </Field>
       </div>
 
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="text-primary text-lg">📊</span>
+          <h4 className="text-lg font-bold text-primary">Phân tích - Đánh giá</h4>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="rounded-2xl p-5 bg-primary/10 border border-primary/25 green-glow">
+            <div className="font-semibold text-primary mb-3 flex items-center gap-2">✅ Điểm tốt</div>
+            <ul className="text-sm text-foreground/85 space-y-2 list-disc pl-5">
+              {p.strengths.map((s, i) => <li key={i}>{s}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-2xl p-5 bg-accent/25 border border-accent">
+            <div className="font-semibold text-accent-foreground mb-3 flex items-center gap-2">🔧 Cần cải thiện</div>
+            <ul className="text-sm text-foreground/85 space-y-2 list-disc pl-5">
+              {p.improvements.map((s, i) => <li key={i}>{s}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-2xl p-5 bg-secondary/20 border border-secondary/40">
+            <div className="font-semibold text-secondary-foreground mb-3 flex items-center gap-2">💡 Bài học rút ra</div>
+            <ul className="text-sm text-foreground/85 space-y-2 list-disc pl-5">
+              {p.lesson.map((s, i) => <li key={i}>{s}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 rounded-2xl p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/25 green-glow">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="text-primary text-lg">🤖</span>
+          <h4 className="text-lg font-bold text-primary">Liêm chính học thuật &amp; Sử dụng AI</h4>
+        </div>
+        <div className="mb-4">
+          <div className="text-sm font-semibold mb-2">Cách tôi sử dụng AI:</div>
+          <ul className="text-sm text-foreground/85 space-y-1.5">
+            {p.aiUsage.map((s, i) => <li key={i} className="flex gap-2"><span className="text-primary">→</span><span>{s}</span></li>)}
+          </ul>
+        </div>
+        <div>
+          <div className="text-sm font-semibold mb-2">Cam kết liêm chính:</div>
+          <ul className="text-sm text-foreground/85 space-y-1.5">
+            {p.integrity.map((s, i) => <li key={i} className="flex gap-2"><span className="text-primary">✓</span><span>{s}</span></li>)}
+          </ul>
+        </div>
+      </div>
+
       {p.extra}
+
 
       <div className="mt-6 aspect-[16/6] rounded-2xl bg-gradient-to-br from-primary/10 via-muted to-accent/20 border border-dashed border-primary/40 flex items-center justify-center text-sm text-primary font-medium green-spotlight">
         📷 Khu vực chèn ảnh minh chứng — thay bằng ảnh thật
