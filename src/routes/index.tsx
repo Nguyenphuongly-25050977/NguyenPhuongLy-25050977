@@ -546,7 +546,7 @@ function Portfolio() {
                       </div>
                       <h3 className="text-xl font-semibold mb-2">{m.title}</h3>
                       <p className="text-sm text-muted-foreground mb-4">{m.desc}</p>
-                      <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-medium text-secondary group-hover:gap-2 transition-all">
+                      <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
                         Xem chi tiết <span>→</span>
                       </a>
                     </div>
