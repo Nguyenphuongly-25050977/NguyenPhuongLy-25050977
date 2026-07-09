@@ -578,24 +578,35 @@ function Portfolio() {
 
       {/* ========== Evidence ========== */}
       <Section id="evidence" eyebrow="Evidence Gallery" title="Thư viện minh chứng">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {EVIDENCE.map((e, i) => (
-            <div key={i} className="reveal group rounded-2xl overflow-hidden bg-card border border-border hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all">
-              <div className="aspect-video bg-gradient-to-br from-primary/15 via-secondary/20 to-accent/15 flex items-center justify-center text-5xl group-hover:scale-105 transition-transform">
-                {e.icon}
+            <div
+              key={i}
+              className="reveal group relative rounded-2xl overflow-hidden bg-card border border-border hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/15 transition-all"
+              style={{ transform: `rotate(${(i % 2 ? 1 : -1) * 0.6}deg)` }}
+            >
+              {/* Tape */}
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 tape rounded-sm shadow z-10" />
+              <div className="aspect-video relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-secondary/25 to-accent/20 grid-bg" />
+                <span className="relative text-6xl group-hover:scale-110 transition-transform">{e.icon}</span>
+                <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest bg-background/80 px-2 py-1 rounded-full">
+                  #0{i + 1}
+                </span>
               </div>
               <div className="p-5">
                 <h4 className="font-semibold mb-1">{e.title}</h4>
                 <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">Thay bằng minh chứng thật</span>
-                  <button className="text-sm font-medium text-primary hover:underline">Xem chi tiết</button>
+                  <span className="text-[10px] px-2 py-1 rounded-full bg-muted text-muted-foreground uppercase tracking-widest">Placeholder</span>
+                  <button className="text-sm font-semibold text-secondary hover:underline">Xem chi tiết →</button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </Section>
+
 
       {/* ========== Skills ========== */}
       <Section id="skills" eyebrow="Skills Matrix" title="Bảng tổng hợp kỹ năng đạt được">
