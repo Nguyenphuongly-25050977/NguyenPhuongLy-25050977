@@ -186,10 +186,10 @@ const PROJECTS: Project[] = [
     extra: (
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-sm border-collapse">
-          <thead className="bg-secondary/40 text-left">
+          <thead className="bg-primary/15 text-left">
             <tr>
               {["Thành viên", "Nhiệm vụ", "Hạn hoàn thành", "Trạng thái", "Ghi chú"].map((h) => (
-                <th key={h} className="p-3 border border-border font-semibold">{h}</th>
+                <th key={h} className="p-3 border border-border font-semibold text-primary">{h}</th>
               ))}
             </tr>
           </thead>
