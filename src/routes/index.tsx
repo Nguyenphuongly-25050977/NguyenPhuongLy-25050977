@@ -719,8 +719,8 @@ function Portfolio() {
           <div>
             <div className="font-semibold mb-2">Liên hệ</div>
             <ul className="space-y-1 text-muted-foreground">
-              <li>Email: yourname@example.edu.vn</li>
-              <li>Trường: [Điền trường]</li>
+              <li>Email:25050977@vnu.edu.vn</li>
+              <li>Trường:Đại học Kinh tế - ĐHQGHN</li>
             </ul>
           </div>
         </div>
