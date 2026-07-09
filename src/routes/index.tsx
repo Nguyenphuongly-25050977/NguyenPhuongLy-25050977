@@ -396,7 +396,7 @@ const PROJECTS: Project[] = [
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { src: p4Img2.url, caption: "Bảng Trello phân công nhiệm vụ nhóm" },
-              { src: p4Img4.url, caption: "Trao đổi & chốt deadline trên Discord nhóm 36" },
+              
               { src: p4Img1.url, caption: "Thư mục Google Drive dùng chung của nhóm" },
               { src: p4Img3.url, caption: "Tài liệu & slide thuyết trình nhóm 36 trên Drive" },
             ].map((it, i) => (
