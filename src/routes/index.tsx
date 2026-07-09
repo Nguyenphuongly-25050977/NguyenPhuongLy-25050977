@@ -764,7 +764,7 @@ function ProjectCard({ p }: { p: Project }) {
         </div>
         <div className="flex flex-wrap gap-2">
           {p.tags.map((t) => (
-            <span key={t} className="text-xs px-3 py-1 rounded-full bg-secondary/40 text-secondary-foreground font-medium">{t}</span>
+            <span key={t} className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-medium border border-primary/20">{t}</span>
           ))}
         </div>
       </div>
