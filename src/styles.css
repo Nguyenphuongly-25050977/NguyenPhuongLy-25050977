@@ -102,38 +102,38 @@
 }
 
 .dark {
-  --background: oklch(from var(--green) 0.15 c h);
+  --background: oklch(from var(--green) 0.15 0.06 h);
   --foreground: oklch(0.95 0 0);
-  --card: oklch(from var(--green) 0.2 c h);
+  --card: oklch(from var(--green) 0.2 0.06 h);
   --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(from var(--green) 0.2 c h);
+  --popover: oklch(from var(--green) 0.2 0.06 h);
   --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(from var(--green) 0.7 c h);
-  --primary-foreground: oklch(from var(--green) 0.15 c h);
+  --primary: oklch(from var(--green) 0.65 0.12 h);
+  --primary-foreground: oklch(from var(--green) 0.12 0.05 h);
   --secondary: oklch(from var(--red) 0.65 c h);
   --secondary-foreground: oklch(0.99 0 0);
-  --muted: oklch(from var(--green) 0.25 c h);
-  --muted-foreground: oklch(from var(--green) 0.7 c h);
-  --accent: oklch(from var(--green) 0.25 c h);
+  --muted: oklch(from var(--green) 0.25 0.08 h);
+  --muted-foreground: oklch(from var(--green) 0.75 0.09 h);
+  --accent: oklch(from var(--green) 0.28 0.1 h);
   --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(from var(--red) 0.6 c h);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(from var(--green) 0.3 c h / 30%);
-  --input: oklch(from var(--green) 0.25 c h / 40%);
-  --ring: oklch(from var(--green) 0.6 c h);
-  --chart-1: oklch(from var(--green) 0.7 c h);
+  --border: oklch(from var(--green) 0.35 0.08 h / 40%);
+  --input: oklch(from var(--green) 0.28 0.07 h / 50%);
+  --ring: oklch(from var(--green) 0.65 0.12 h);
+  --chart-1: oklch(from var(--green) 0.65 0.12 h);
   --chart-2: oklch(from var(--red) 0.65 c h);
-  --chart-3: oklch(from var(--green) 0.6 c h);
+  --chart-3: oklch(from var(--green) 0.55 0.11 h);
   --chart-4: oklch(from var(--red) 0.55 c h);
-  --chart-5: oklch(from var(--green) 0.5 c h);
-  --sidebar: oklch(from var(--green) 0.2 c h);
+  --chart-5: oklch(from var(--green) 0.45 0.1 h);
+  --sidebar: oklch(from var(--green) 0.2 0.06 h);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(from var(--green) 0.7 c h);
-  --sidebar-primary-foreground: oklch(from var(--green) 0.15 c h);
-  --sidebar-accent: oklch(from var(--green) 0.25 c h);
+  --sidebar-primary: oklch(from var(--green) 0.65 0.12 h);
+  --sidebar-primary-foreground: oklch(from var(--green) 0.12 0.05 h);
+  --sidebar-accent: oklch(from var(--green) 0.28 0.1 h);
   --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(from var(--green) 0.3 c h / 30%);
-  --sidebar-ring: oklch(from var(--green) 0.6 c h);
+  --sidebar-border: oklch(from var(--green) 0.35 0.08 h / 40%);
+  --sidebar-ring: oklch(from var(--green) 0.65 0.12 h);
 }
 
 @layer base {
