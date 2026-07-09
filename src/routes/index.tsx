@@ -594,14 +594,14 @@ function Portfolio() {
                   #0{i + 1}
                 </span>
               </div>
-              <div className="p-5">
-                <h4 className="font-semibold mb-1">{e.title}</h4>
-                <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] px-2 py-1 rounded-full bg-muted text-muted-foreground uppercase tracking-widest">Placeholder</span>
-                  <button className="text-sm font-semibold text-secondary hover:underline">Xem chi tiết →</button>
+                <div className="p-5">
+                  <h4 className="font-semibold mb-1">{e.title}</h4>
+                  <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Placeholder</span>
+                    <button className="text-sm font-semibold text-primary hover:underline">Xem chi tiết →</button>
+                  </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
