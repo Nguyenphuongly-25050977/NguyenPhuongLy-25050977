@@ -532,24 +532,40 @@ function Portfolio() {
       {/* ========== Overview timeline ========== */}
       <Section id="overview" eyebrow="Project Overview" title="Hành trình 6 nhiệm vụ">
         <div className="relative">
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-secondary/40 to-accent/40" />
-          <div className="space-y-8">
-            {MISSIONS.map((m, i) => (
-              <div key={m.n} className={`reveal md:grid md:grid-cols-2 md:gap-10 ${i % 2 ? "md:[&>*:first-child]:col-start-2" : ""}`}>
-                <div className={`rounded-2xl p-6 bg-card border border-border hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all ${i % 2 ? "md:text-left" : "md:text-right"}`}>
-                  <div className="flex items-center gap-3 mb-2 md:justify-start" style={{ justifyContent: i % 2 ? "flex-start" : "flex-end" }}>
-                    <span className="text-3xl">{m.icon}</span>
-                    <span className="text-xs font-bold uppercase tracking-widest text-primary">Nhiệm vụ {m.n}</span>
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-accent" />
+          <div className="space-y-10">
+            {MISSIONS.map((m, i) => {
+              const right = i % 2 === 1;
+              return (
+                <div key={m.n} className="reveal md:grid md:grid-cols-9 md:gap-6 items-center relative">
+                  <div className={`md:col-span-4 ${right ? "md:order-3" : ""}`}>
+                    <div className={`group rounded-3xl p-6 bg-card border border-border hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-1 transition-all ${right ? "md:text-left" : "md:text-right"}`}>
+                      <div className={`flex items-center gap-3 mb-3 ${right ? "md:justify-start" : "md:justify-end"}`}>
+                        <span className="text-3xl">{m.icon}</span>
+                        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary px-2 py-1 rounded-full bg-primary/10">Nhiệm vụ {m.n}</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">{m.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4">{m.desc}</p>
+                      <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-medium text-secondary group-hover:gap-2 transition-all">
+                        Xem chi tiết <span>→</span>
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{m.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{m.desc}</p>
-                  <a href={`#project-${m.n}`} className="inline-block text-sm font-medium text-primary hover:underline">Xem chi tiết →</a>
+                  {/* Center node */}
+                  <div className="hidden md:flex md:col-span-1 md:order-2 justify-center">
+                    <div className="relative w-14 h-14 rounded-full bg-background border-2 border-primary flex items-center justify-center font-black text-primary shadow-lg shadow-primary/20">
+                      {m.n}
+                      <span className="absolute inset-0 rounded-full border-2 border-secondary/40 animate-ping" />
+                    </div>
+                  </div>
+                  <div className={`hidden md:block md:col-span-4 ${right ? "md:order-1" : ""}`} />
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </Section>
+
 
       {/* ========== Projects ========== */}
       <Section id="projects" eyebrow="Projects" title="6 dự án học tập chi tiết">
