@@ -662,6 +662,15 @@ const EVIDENCE = [
     fileLabel: "📎 BaoCao_DuAn4.docx",
   },
   {
+    project: 4,
+    icon: "🎬",
+    title: "Video minh chứng nhóm (YouTube)",
+    desc: "Video ghi lại quá trình hợp tác và trình bày sản phẩm của nhóm.",
+    img: null,
+    href: "https://youtu.be/Smms0PHSx_I?si=ULcd6-LKnxI5TJHM",
+    fileLabel: "▶️ Xem trên YouTube",
+  },
+  {
     project: 5,
     icon: "🎨",
     title: "Infographic “AI in University Learning”",
