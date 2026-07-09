@@ -237,10 +237,10 @@ const PROJECTS: Project[] = [
     tags: ["AI tạo sinh", "Video", "Infographic"],
     progress: 100,
     extra: (
-      <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/30 to-accent/20 border border-border flex items-center justify-center text-center p-8">
+      <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
         <div>
           <div className="text-4xl mb-3">🎬</div>
-          <p className="font-semibold">Khu vực nhúng sản phẩm video / infographic</p>
+          <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
           <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
         </div>
       </div>
