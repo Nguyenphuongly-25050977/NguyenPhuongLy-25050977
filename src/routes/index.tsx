@@ -487,7 +487,7 @@ function Portfolio() {
                 "Tư duy phản biện",
                 "★",
               ].map((t, i) => (
-                <span key={`${k}-${i}`} className={i % 2 ? "text-secondary" : "text-foreground/70"}>
+                <span key={`${k}-${i}`} className={i % 2 ? "text-primary" : "text-foreground/70"}>
                   {t}
                 </span>
               )),
