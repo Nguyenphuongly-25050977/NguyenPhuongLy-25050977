@@ -543,6 +543,14 @@ function Portfolio() {
             <InfoBlock title="Sở thích cá nhân">
               Học công nghệ số, khám phá AI, sáng tạo nội dung, quản lý dữ liệu và làm việc nhóm.
             </InfoBlock>
+            <InfoBlock title="Mục tiêu cá nhân">
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Trở thành sinh viên chủ động trong học tập, biết tự tìm kiếm và ứng dụng công nghệ hiệu quả.</li>
+                <li>Phát triển tư duy phản biện, kỹ năng phân tích dữ liệu và làm việc nhóm chuyên nghiệp.</li>
+                <li>Xây dựng thương hiệu cá nhân qua các sản phẩm số chất lượng và có trách nhiệm.</li>
+                <li>Hướng tới việc kết nối kiến thức chuyên ngành với xu hướng chuyển đổi số toàn cầu.</li>
+              </ul>
+            </InfoBlock>
             <InfoBlock title="Mục tiêu Portfolio">
               <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                 <li>Hệ thống hóa toàn bộ các bài tập cuối kỳ.</li>
