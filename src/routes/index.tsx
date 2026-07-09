@@ -477,14 +477,19 @@ const PROJECTS: Project[] = [
         <div>
           <div className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">📸 Ảnh minh chứng thực hành</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {["Kịch bản do ChatGPT hỗ trợ viết", "Hình minh họa DALL·E cho khái niệm Học máy", "Giao diện dựng video trên CapCut"].map((c, i) => (
-              <div key={i} className="aspect-video rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 flex flex-col items-center justify-center text-primary/70 text-xs text-center p-3 gap-2">
-                <span className="text-2xl">🖼️</span>
-                <span>{c}</span>
-              </div>
+            {[
+              { src: p5Img1.url, caption: "Infographic tóm tắt “AI in University Learning” (bản dọc)" },
+              { src: p5Img2.url, caption: "Prompt DALL·E & phản hồi ChatGPT cho hình minh họa" },
+              { src: p5Img3.url, caption: "Infographic đầy đủ: lợi ích, thách thức & sử dụng AI có trách nhiệm" },
+            ].map((it, i) => (
+              <figure key={i} className="rounded-2xl border border-primary/30 bg-primary/5 overflow-hidden">
+                <img src={it.src} alt={it.caption} className="w-full aspect-video object-cover" />
+                <figcaption className="text-xs text-primary/80 p-2 text-center">{it.caption}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
+
         <div className="flex flex-wrap gap-3">
           <a href={p5Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
             📄 Xem báo cáo đầy đủ: BaoCao_DuAn5.pdf
