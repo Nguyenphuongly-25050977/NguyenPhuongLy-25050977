@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import p1Taskbar from "@/assets/project1/taskbar.png.asset.json";
+import p1PcNay from "@/assets/project1/pc-nay.png.asset.json";
+import p1NewFolder from "@/assets/project1/new-folder.png.asset.json";
+import p1GhiChu from "@/assets/project1/ghichu-file.png.asset.json";
+import p1CopyMenu from "@/assets/project1/copy-menu.png.asset.json";
+import p1Docx from "@/assets/project1/GhiChuQuanTrong.docx.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -92,6 +98,34 @@ const PROJECTS: Project[] = [
       "Ảnh chụp màn hình là minh chứng thực tế từ quá trình thực hành.",
       "Tất cả nội dung báo cáo được viết dựa trên trải nghiệm thực tế.",
     ],
+    extra: (
+      <div className="mt-6 space-y-4">
+        <div className="text-sm font-semibold text-primary uppercase tracking-widest">📸 Ảnh minh chứng thực hành</div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { src: p1Taskbar.url, cap: "Mở File Explorer từ thanh tác vụ (Win + E)" },
+            { src: p1PcNay.url, cap: "Truy cập PC này và ổ đĩa D:" },
+            { src: p1NewFolder.url, cap: "Chuột phải → Mới → Cặp để tạo thư mục" },
+            { src: p1GhiChu.url, cap: "Tệp GhiChuQuanTrong.txt sau khi đổi tên" },
+            { src: p1CopyMenu.url, cap: "Menu chuột phải: Sao chép (Ctrl+C) tệp tin" },
+          ].map((it, i) => (
+            <figure key={i} className="rounded-2xl overflow-hidden border border-border bg-card group">
+              <img src={it.src} alt={it.cap} loading="lazy" className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <figcaption className="p-3 text-xs text-muted-foreground">{it.cap}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <a
+          href={p1Docx.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          download="GhiChuQuanTrong.docx"
+          className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow"
+        >
+          📄 Tải tệp minh chứng: GhiChuQuanTrong.docx
+        </a>
+      </div>
+    ),
   },
   {
     n: 2,
