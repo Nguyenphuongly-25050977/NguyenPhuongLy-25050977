@@ -62,74 +62,77 @@
 }
 
 :root {
+  --green: #0F3C3F;
+  --red: #930F1D;
+
   --radius: 1rem;
-  --background: oklch(0.985 0.012 340);
-  --foreground: oklch(0.28 0.05 300);
+  --background: oklch(from var(--green) 0.97 0.02 h);
+  --foreground: var(--green);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.28 0.05 300);
+  --card-foreground: var(--green);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.28 0.05 300);
-  --primary: oklch(0.72 0.15 350);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.88 0.08 220);
-  --secondary-foreground: oklch(0.3 0.08 260);
-  --muted: oklch(0.96 0.02 330);
-  --muted-foreground: oklch(0.5 0.05 300);
-  --accent: oklch(0.9 0.09 200);
-  --accent-foreground: oklch(0.3 0.08 260);
-  --destructive: oklch(0.65 0.22 25);
+  --popover-foreground: var(--green);
+  --primary: var(--green);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: var(--red);
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: oklch(from var(--green) 0.94 0.02 h);
+  --muted-foreground: oklch(from var(--green) 0.5 c h);
+  --accent: oklch(from var(--green) 0.9 0.03 h);
+  --accent-foreground: var(--green);
+  --destructive: var(--red);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.04 330);
-  --input: oklch(0.92 0.03 330);
-  --ring: oklch(0.72 0.15 350);
-  --chart-1: oklch(0.72 0.15 350);
-  --chart-2: oklch(0.75 0.12 220);
-  --chart-3: oklch(0.8 0.1 180);
-  --chart-4: oklch(0.78 0.14 30);
-  --chart-5: oklch(0.7 0.13 290);
-  --sidebar: oklch(0.98 0.015 340);
-  --sidebar-foreground: oklch(0.28 0.05 300);
-  --sidebar-primary: oklch(0.72 0.15 350);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.9 0.09 200);
-  --sidebar-accent-foreground: oklch(0.3 0.08 260);
-  --sidebar-border: oklch(0.9 0.04 330);
-  --sidebar-ring: oklch(0.72 0.15 350);
+  --border: oklch(from var(--green) 0.88 0.02 h);
+  --input: oklch(from var(--green) 0.92 0.015 h);
+  --ring: var(--green);
+  --chart-1: var(--green);
+  --chart-2: var(--red);
+  --chart-3: oklch(from var(--green) 0.8 0.05 h);
+  --chart-4: oklch(from var(--red) 0.75 0.06 h);
+  --chart-5: oklch(from var(--green) 0.7 0.04 h);
+  --sidebar: oklch(from var(--green) 0.98 0.01 h);
+  --sidebar-foreground: var(--green);
+  --sidebar-primary: var(--green);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(from var(--green) 0.9 0.03 h);
+  --sidebar-accent-foreground: var(--green);
+  --sidebar-border: oklch(from var(--green) 0.88 0.02 h);
+  --sidebar-ring: var(--green);
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --background: oklch(from var(--green) 0.15 c h);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(from var(--green) 0.2 c h);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(from var(--green) 0.2 c h);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(from var(--green) 0.7 c h);
+  --primary-foreground: oklch(from var(--green) 0.15 c h);
+  --secondary: oklch(from var(--red) 0.65 c h);
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: oklch(from var(--green) 0.25 c h);
+  --muted-foreground: oklch(from var(--green) 0.7 c h);
+  --accent: oklch(from var(--green) 0.25 c h);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(from var(--red) 0.6 c h);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(from var(--green) 0.3 c h / 30%);
+  --input: oklch(from var(--green) 0.25 c h / 40%);
+  --ring: oklch(from var(--green) 0.6 c h);
+  --chart-1: oklch(from var(--green) 0.7 c h);
+  --chart-2: oklch(from var(--red) 0.65 c h);
+  --chart-3: oklch(from var(--green) 0.6 c h);
+  --chart-4: oklch(from var(--red) 0.55 c h);
+  --chart-5: oklch(from var(--green) 0.5 c h);
+  --sidebar: oklch(from var(--green) 0.2 c h);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(from var(--green) 0.7 c h);
+  --sidebar-primary-foreground: oklch(from var(--green) 0.15 c h);
+  --sidebar-accent: oklch(from var(--green) 0.25 c h);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(from var(--green) 0.3 c h / 30%);
+  --sidebar-ring: oklch(from var(--green) 0.6 c h);
 }
 
 @layer base {
@@ -143,8 +146,8 @@
 
   body {
     background:
-      radial-gradient(circle at 10% 0%, oklch(0.94 0.06 340) 0%, transparent 45%),
-      radial-gradient(circle at 90% 20%, oklch(0.93 0.06 220) 0%, transparent 40%),
+      radial-gradient(circle at 10% 0%, oklch(from var(--green) 0.92 0.04 h / 35%) 0%, transparent 45%),
+      radial-gradient(circle at 90% 20%, oklch(from var(--red) 0.9 0.05 h / 20%) 0%, transparent 40%),
       var(--color-background);
     color: var(--color-foreground);
     font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
