@@ -398,6 +398,16 @@ const PROJECTS: Project[] = [
             ))}
           </div>
         </div>
+        <div>
+          <a
+            href={p4Docx2.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/15 hover:bg-primary/25 text-primary font-semibold text-sm transition"
+          >
+            📎 Tải tài liệu Word minh chứng (BaoCao_DuAn4.docx)
+          </a>
+        </div>
       </div>
     ),
   },
