@@ -398,7 +398,7 @@ const PROJECTS: Project[] = [
             ))}
           </div>
         </div>
-        <div>
+        <div className="flex flex-wrap gap-3">
           <a
             href={p4Docx2.url}
             target="_blank"
@@ -406,6 +406,14 @@ const PROJECTS: Project[] = [
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/15 hover:bg-primary/25 text-primary font-semibold text-sm transition"
           >
             📎 Tải tài liệu Word minh chứng (BaoCao_DuAn4.docx)
+          </a>
+          <a
+            href="https://youtu.be/Smms0PHSx_I?si=ULcd6-LKnxI5TJHM"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500/15 hover:bg-red-500/25 text-red-500 font-semibold text-sm transition"
+          >
+            ▶️ Xem video minh chứng nhóm (YouTube)
           </a>
         </div>
       </div>
