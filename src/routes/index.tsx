@@ -437,10 +437,10 @@ function Portfolio() {
 
           {/* Orbit visual */}
           <div className="reveal relative aspect-square max-w-md mx-auto w-full">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-secondary/40 to-accent/30 blur-3xl" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-primary/20 to-accent/30 blur-3xl" />
             {/* Orbit rings */}
-            <div className="absolute inset-6 rounded-full border border-dashed border-primary/40 spin-slow" />
-            <div className="absolute inset-16 rounded-full border border-dashed border-secondary/40 spin-reverse" />
+            <div className="absolute inset-6 rounded-full border border-dashed border-primary/50 spin-slow" />
+            <div className="absolute inset-16 rounded-full border border-dashed border-primary/30 spin-reverse" />
             {/* Orbiting chips */}
             {["📁", "🔎", "💬", "🤝", "🎨", "🛡️"].map((e, i) => {
               const angle = (i / 6) * Math.PI * 2;
@@ -450,7 +450,7 @@ function Portfolio() {
               return (
                 <div
                   key={e}
-                  className="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-card border border-border shadow-lg shadow-primary/20 flex items-center justify-center text-xl float-slow"
+                  className="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-card border border-primary/30 shadow-lg shadow-primary/30 flex items-center justify-center text-xl float-slow"
                   style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 0.4}s` }}
                 >
                   {e}
@@ -459,9 +459,9 @@ function Portfolio() {
             })}
             {/* Center core */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-card to-muted border border-border flex flex-col items-center justify-center text-center glow-ring">
+              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-card to-muted border border-primary/30 flex flex-col items-center justify-center text-center green-glow">
                 <div className="text-5xl">🤖</div>
-                <div className="text-[11px] uppercase tracking-widest text-muted-foreground mt-2">AI · Human</div>
+                <div className="text-[11px] uppercase tracking-widest text-primary mt-2">AI · Human</div>
               </div>
             </div>
           </div>
