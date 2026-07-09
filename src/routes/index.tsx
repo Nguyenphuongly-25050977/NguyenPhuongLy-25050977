@@ -466,21 +466,26 @@ const PROJECTS: Project[] = [
       "Tôi tự chịu trách nhiệm áp dụng các nguyên tắc này trong học tập.",
     ],
     extra: (
-      <div className="mt-6 grid md:grid-cols-2 gap-3">
-        {[
-          "Không dùng AI để gian lận hoặc làm thay toàn bộ bài tập.",
-          "Luôn kiểm chứng thông tin do AI cung cấp.",
-          "Ghi rõ khi có sử dụng AI trong quá trình học tập.",
-          "Không nhập dữ liệu cá nhân hoặc thông tin nhạy cảm vào AI.",
-          "Không sao chép nguyên văn nội dung AI nếu chưa kiểm tra và chỉnh sửa.",
-          "Sử dụng AI để hỗ trợ tư duy, không thay thế tư duy.",
-          "Chịu trách nhiệm cuối cùng với sản phẩm học tập của bản thân.",
-        ].map((t, i) => (
-          <div key={i} className="flex gap-3 items-start p-4 rounded-xl bg-accent/30 border border-border">
-            <span className="text-primary font-bold">{i + 1}.</span>
-            <span className="text-sm">{t}</span>
-          </div>
-        ))}
+      <div className="mt-6 space-y-4">
+        <div className="grid md:grid-cols-2 gap-3">
+          {[
+            "Không dùng AI để gian lận hoặc làm thay toàn bộ bài tập.",
+            "Luôn kiểm chứng thông tin do AI cung cấp.",
+            "Ghi rõ khi có sử dụng AI trong quá trình học tập.",
+            "Không nhập dữ liệu cá nhân hoặc thông tin nhạy cảm vào AI.",
+            "Không sao chép nguyên văn nội dung AI nếu chưa kiểm tra và chỉnh sửa.",
+            "Sử dụng AI để hỗ trợ tư duy, không thay thế tư duy.",
+            "Chịu trách nhiệm cuối cùng với sản phẩm học tập của bản thân.",
+          ].map((t, i) => (
+            <div key={i} className="flex gap-3 items-start p-4 rounded-xl bg-accent/30 border border-border">
+              <span className="text-primary font-bold">{i + 1}.</span>
+              <span className="text-sm">{t}</span>
+            </div>
+          ))}
+        </div>
+        <a href={p6Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn6.pdf
+        </a>
       </div>
     ),
   },
