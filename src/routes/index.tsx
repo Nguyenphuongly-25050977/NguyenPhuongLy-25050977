@@ -46,12 +46,12 @@ const NAV = [
 ];
 
 const MISSIONS = [
-  { n: 1, icon: "📁", title: "Quản lý tệp và thư mục", desc: "Tổ chức dữ liệu học tập khoa học, đặt tên file nhất quán." },
-  { n: 2, icon: "🔎", title: "Tìm kiếm & đánh giá thông tin", desc: "Sử dụng toán tử nâng cao, đánh giá độ tin cậy của nguồn." },
-  { n: 3, icon: "💬", title: "Viết Prompt hiệu quả", desc: "So sánh prompt cơ bản và cải tiến, tối ưu kết quả AI." },
-  { n: 4, icon: "🤝", title: "Hợp tác trực tuyến", desc: "Quản lý công việc nhóm bằng công cụ số minh bạch." },
-  { n: 5, icon: "🎨", title: "Sáng tạo nội dung với AI", desc: "Ứng dụng AI tạo sinh để sản xuất nội dung học tập." },
-  { n: 6, icon: "🛡️", title: "AI có trách nhiệm", desc: "Đạo đức, quyền riêng tư và bộ nguyên tắc cá nhân." },
+  { n: 1, icon: "📁", title: "Bài 1 - Bài tập 1 của mục 1.4: Thao tác cơ bản với tệp tin và thư mục", desc: "Tổ chức dữ liệu học tập khoa học, đặt tên file nhất quán." },
+  { n: 2, icon: "🔎", title: "Bài 2 - Bai tập 2 cua mục 2.4: Tìm kiem va đanh gia thong tin hoc thuật", desc: "Sử dụng toán tử nâng cao, đánh giá độ tin cậy của nguồn." },
+  { n: 3, icon: "💬", title: "Bài 3 - Bài tập 2 của mục 3.4: Viết Prompt hiệu quả cho các tác vụ học tập", desc: "So sánh prompt cơ bản và cải tiến, tối ưu kết quả AI." },
+  { n: 4, icon: "🤝", title: "Bài 4 - Bài tập 3 của mục 4.4: Sử dung cong cụ hợp tác trực tuyến cho dự án nhóm", desc: "Quản lý công việc nhóm bằng công cụ số minh bạch." },
+  { n: 5, icon: "🎨", title: "Bài 5 - Bài tập 2 của mục 5.4: Sử dụng Al tạo sinh để hỗ trợ sáng tao nội dung", desc: "Ứng dụng AI tạo sinh để sản xuất nội dung học tập." },
+  { n: 6, icon: "🛡️", title: "Bài 6 - Bài tập 4 của mục 6.4: Sử dung Al có trách nhiem trong học tập và nghien cứu", desc: "Đạo đức, quyền riêng tư và bộ nguyên tắc cá nhân." },
 ];
 
 type Project = {
@@ -778,7 +778,7 @@ function Portfolio() {
           <div className="reveal">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-xs font-semibold uppercase tracking-widest mb-6 green-glow">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Nhập môn CNS &amp; AI · 2026
+              NHẬP MÔN CNS & AI HỌC KÌ II 2026
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
               Portfolio{" "}
@@ -822,7 +822,7 @@ function Portfolio() {
             <div className="mt-10 grid grid-cols-4 gap-3 max-w-lg">
               {[
                 { n: "6", l: "Nhiệm vụ" },
-                { n: "20+", l: "Minh chứng" },
+                { n: "10+", l: "Minh chứng" },
                 { n: "8", l: "Kỹ năng" },
                 { n: "100%", l: "Hoàn thành" },
               ].map((s) => (
@@ -860,7 +860,7 @@ function Portfolio() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-40 h-40 rounded-full bg-gradient-to-br from-card to-muted border border-primary/30 flex flex-col items-center justify-center text-center green-glow">
                 <div className="text-5xl">🤖</div>
-                <div className="text-[11px] uppercase tracking-widest text-primary mt-2">AI · Human</div>
+                <div className="text-[11px] uppercase tracking-widest text-primary mt-2">{"\n"}</div>
               </div>
             </div>
           </div>
@@ -965,10 +965,9 @@ function Portfolio() {
                 <span>💬</span> Lời chia sẻ cá nhân
               </h4>
               <p className="text-sm text-foreground/90 leading-relaxed italic">
-                “Mỗi bài tập trong môn học không chỉ là một nhiệm vụ cần hoàn thành, mà còn là cơ hội để em trải
-                nghiệm sức mạnh của công nghệ số và AI trong học tập. Em học được cách tổ chức thông tin khoa học hơn,
-                đặt câu hỏi thông minh hơn với AI, và đặc biệt là ý thức rõ trách nhiệm khi sử dụng công cụ tạo sinh.
-                Portfolio này là minh chứng cho sự nỗ lực, kiên trì và niềm đam mê học hỏi của em.”
+                “Mỗi bài tập trong môn học không chỉ là một nhiệm vụ cần hoàn thành, mà còn là cơ hội để em trải nghiệm sức mạnh của công nghệ số và AI trong học tập. Em học được cách tổ chức thông tin khoa học hơn, đặt câu hỏi thông minh hơn với AI, và đặc biệt là ý thức rõ trách nhiệm khi sử dụng công cụ tạo sinh. Portfolio này là minh chứng cho sự nỗ lực, kiên trì và niềm đam mê học hỏi của em.”
+                {"\n"}
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-Nguyễn Phương Ly-
               </p>
             </div>
           </div>
