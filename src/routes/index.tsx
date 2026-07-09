@@ -377,8 +377,8 @@ function Portfolio() {
         <div aria-hidden className="absolute inset-0 grid-bg opacity-70" />
         <div className="relative max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center">
           <div className="reveal">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/50 text-secondary-foreground text-xs font-semibold uppercase tracking-widest mb-6 glow-ring">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-xs font-semibold uppercase tracking-widest mb-6 green-glow">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               Nhập môn CNS &amp; AI · 2026
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
