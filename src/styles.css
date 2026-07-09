@@ -147,8 +147,10 @@
 
   body {
     background:
-      radial-gradient(circle at 10% 0%, oklch(from var(--green) 0.92 0.04 h / 35%) 0%, transparent 45%),
-      radial-gradient(circle at 90% 20%, oklch(from var(--red) 0.9 0.05 h / 20%) 0%, transparent 40%),
+      radial-gradient(circle at 8% 0%, oklch(from var(--green) 0.88 0.09 h / 45%) 0%, transparent 42%),
+      radial-gradient(circle at 92% 10%, oklch(from var(--green-bright) 0.8 0.12 h / 28%) 0%, transparent 38%),
+      radial-gradient(circle at 50% 100%, oklch(from var(--green) 0.92 0.06 h / 30%) 0%, transparent 50%),
+      radial-gradient(circle at 90% 20%, oklch(from var(--red) 0.9 0.05 h / 18%) 0%, transparent 40%),
       var(--color-background);
     color: var(--color-foreground);
     font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
