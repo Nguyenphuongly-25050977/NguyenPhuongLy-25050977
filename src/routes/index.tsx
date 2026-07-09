@@ -594,54 +594,115 @@ const PROJECTS: Project[] = [
 
 const EVIDENCE = [
   {
+    project: 1,
     icon: "🗂️",
-    title: "Cấu trúc thư mục & ghi chú",
-    desc: "Ảnh thao tác tạo thư mục môn học và file ghi chú Word đã lưu.",
+    title: "Tạo thư mục môn học",
+    desc: "Ảnh thao tác tạo New Folder trong ổ đĩa học tập.",
     img: p1NewFolder.url,
     href: p1Docx.url,
     fileLabel: "📄 GhiChuQuanTrong.docx",
   },
   {
+    project: 1,
+    icon: "🖥️",
+    title: "Định vị & truy cập nhanh",
+    desc: "Ghim thư mục lên Taskbar / PC này để mở nhanh khi học.",
+    img: p1Taskbar.url,
+    href: p1Docx.url,
+    fileLabel: "📄 GhiChuQuanTrong.docx",
+  },
+  {
+    project: 2,
     icon: "🔍",
-    title: "Nguồn học thuật đã đánh giá",
-    desc: "Ảnh chụp nguồn học thuật + báo cáo tìm kiếm chuẩn Harvard.",
+    title: "Nguồn học thuật #1",
+    desc: "Bài báo khoa học đã đánh giá theo tiêu chí CRAAP.",
     img: p2Src1.url,
     href: p2Pdf.url,
     fileLabel: "📄 BaoCaoTimKiemThongTin.pdf",
   },
   {
+    project: 2,
+    icon: "📚",
+    title: "Nguồn học thuật #2",
+    desc: "Áp dụng toán tử site:, filetype:pdf để lọc nguồn đáng tin.",
+    img: p2Src3.url,
+    href: p2Pdf.url,
+    fileLabel: "📄 BaoCaoTimKiemThongTin.pdf",
+  },
+  {
+    project: 3,
+    icon: "💬",
+    title: "Prompt ban đầu",
+    desc: "Câu hỏi mở đơn giản “Giải thích về AI cho tôi.”",
+    img: p3Src1.url,
+    href: p3Pdf.url,
+    fileLabel: "📄 BaoCao_DuAn3.pdf",
+  },
+  {
+    project: 3,
     icon: "💡",
-    title: "Prompt cải tiến & kết quả AI",
-    desc: "So sánh prompt ban đầu vs prompt có vai trò, tiêu chí và định dạng.",
+    title: "Prompt cải tiến (RTF)",
+    desc: "Bổ sung vai trò, đối tượng, độ dài & định dạng đầu ra.",
     img: p3Src2.url,
     href: p3Pdf.url,
     fileLabel: "📄 BaoCao_DuAn3.pdf",
   },
   {
+    project: 3,
+    icon: "✅",
+    title: "Kết quả AI cải tiến",
+    desc: "Đầu ra có mục đánh số, ví dụ và phần kết luận rõ ràng.",
+    img: p3Src3.url,
+    href: p3Pdf.url,
+    fileLabel: "📄 BaoCao_DuAn3.pdf",
+  },
+  {
+    project: 4,
     icon: "📋",
     title: "Hợp tác nhóm trực tuyến",
-    desc: "Báo cáo phân công nhiệm vụ, biên bản họp và tiến độ dự án nhóm.",
+    desc: "Báo cáo phân công, biên bản họp và tiến độ dự án nhóm.",
     img: null,
     href: p4Pdf.url,
     fileLabel: "📄 BaoCao_DuAn4.pdf",
   },
   {
-    icon: "🎥",
-    title: "Sản phẩm AI sáng tạo",
-    desc: "Infographic tổng hợp về AI trong học tập, hỗ trợ bởi ChatGPT & DALL·E.",
+    project: 5,
+    icon: "🎨",
+    title: "Infographic “AI in University Learning”",
+    desc: "Sản phẩm số hoàn chỉnh tổng hợp lợi ích, thách thức & AI có trách nhiệm.",
     img: p5Img3.url,
     href: p5Pdf.url,
     fileLabel: "📄 BaoCao_DuAn5.pdf",
   },
   {
+    project: 5,
+    icon: "🖌️",
+    title: "Prompt DALL·E cho hình minh họa",
+    desc: "Phản hồi ChatGPT khi sinh hình vector sinh viên học cùng AI.",
+    img: p5Img2.url,
+    href: p5Docx.url,
+    fileLabel: "📎 BaoCao_DuAn5.docx",
+  },
+  {
+    project: 6,
     icon: "🛡️",
-    title: "Sử dụng AI có trách nhiệm",
-    desc: "Prompt lập dàn ý bài thuyết trình về AI trong chuyển đổi số tại Việt Nam.",
+    title: "Prompt lập dàn ý thuyết trình",
+    desc: "Dàn ý 5 phần về vai trò AI trong chuyển đổi số tại Việt Nam.",
     img: p6Img1.url,
     href: p6Pdf.url,
     fileLabel: "📄 BaoCao_DuAn6.pdf",
   },
+  {
+    project: 6,
+    icon: "📝",
+    title: "Prompt viết đoạn 300 từ về lợi ích AI",
+    desc: "Ứng dụng AI có trách nhiệm để hỗ trợ viết nội dung học thuật.",
+    img: p6Img2.url,
+    href: p6Docx.url,
+    fileLabel: "📎 BaoCao_DuAn6.docx",
+  },
 ];
+
 
 
 const SKILLS = [
@@ -995,7 +1056,7 @@ function Portfolio() {
                   <h4 className="font-semibold mb-1">{e.title}</h4>
                   <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Dự án {i + 1}</span>
+                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Dự án {e.project}</span>
                     <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-primary hover:underline truncate">{e.fileLabel} →</a>
                   </div>
                 </div>
