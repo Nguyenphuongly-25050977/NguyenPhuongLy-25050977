@@ -14,7 +14,7 @@ import p4Docx2 from "@/assets/project4/BaoCao_DuAn4_v2.docx.asset.json";
 import p4Img1 from "@/assets/project4/p4-drive-empty.png.asset.json";
 import p4Img2 from "@/assets/project4/p4-trello.png.asset.json";
 import p4Img3 from "@/assets/project4/p4-drive-files.png.asset.json";
-import p4Img4 from "@/assets/project4/p4-discord.png.asset.json";
+
 import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
 import p5Docx from "@/assets/project5/BaoCao_DuAn5.docx.asset.json";
 import p5Img1 from "@/assets/project5/infographic1.png.asset.json";
