@@ -711,7 +711,7 @@ function Portfolio() {
           <div>
             <div className="font-semibold mb-2">Thông tin</div>
             <ul className="space-y-1 text-muted-foreground">
-              <li>Sinh viên: [Điền tên]</li>
+              <li>Sinh viên: Nguyễn Phương Ly</li>
               <li>Môn học: Nhập môn CNS & Ứng dụng AI</li>
               <li>Năm học: 2025 – 2026</li>
             </ul>
