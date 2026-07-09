@@ -340,13 +340,23 @@ function Portfolio() {
   }, []);
 
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen text-foreground relative overflow-x-clip">
+      {/* Decorative floating blobs */}
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-32 -left-24 w-[420px] h-[420px] bg-primary/25 blur-3xl blob-morph float-slower" />
+        <div className="absolute top-1/3 -right-32 w-[380px] h-[380px] bg-secondary/25 blur-3xl blob-morph float-slow" />
+        <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-accent/40 blur-3xl blob-morph drift-x" />
+      </div>
+
       {/* ========== Nav ========== */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border/60">
         <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
           <a href="#hero" className="font-bold text-lg tracking-tight flex items-center gap-2">
-            <span className="inline-block w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary" />
-            <span>Portfolio<span className="text-primary">.</span></span>
+            <span className="relative inline-block w-9 h-9">
+              <span className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary spin-slow" />
+              <span className="absolute inset-[3px] rounded-full bg-background flex items-center justify-center text-xs font-black text-primary">P</span>
+            </span>
+            <span>Portfolio<span className="text-secondary">.</span></span>
           </a>
           <nav className="hidden md:flex gap-1 text-sm">
             {NAV.map((n) => (
@@ -363,15 +373,23 @@ function Portfolio() {
       </header>
 
       {/* ========== Hero ========== */}
-      <section id="hero" className="relative pt-32 pb-24 px-5">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center">
+      <section id="hero" className="relative pt-32 pb-20 px-5 grain">
+        <div aria-hidden className="absolute inset-0 grid-bg opacity-70" />
+        <div className="relative max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center">
           <div className="reveal">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/50 text-secondary-foreground text-xs font-semibold uppercase tracking-widest mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Nhập môn CNS & AI · 2026
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/50 text-secondary-foreground text-xs font-semibold uppercase tracking-widest mb-6 glow-ring">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground animate-pulse" />
+              Nhập môn CNS &amp; AI · 2026
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
-              Portfolio <span className="bg-gradient-to-r from-primary via-primary/70 to-secondary bg-clip-text text-transparent">Kỹ thuật số</span> cá nhân
+              Portfolio{" "}
+              <span className="relative inline-block">
+                <span className="text-shimmer">Kỹ thuật số</span>
+                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" preserveAspectRatio="none">
+                  <path d="M2 8 Q 80 -2 150 6 T 298 6" stroke="var(--secondary)" strokeWidth="3" fill="none" strokeLinecap="round" />
+                </svg>
+              </span>{" "}
+              cá nhân
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4">
               Hành trình học tập môn <em>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</em>.
@@ -400,26 +418,84 @@ function Portfolio() {
                 </a>
               ))}
             </div>
+
+            {/* Quick stats */}
+            <div className="mt-10 grid grid-cols-4 gap-3 max-w-lg">
+              {[
+                { n: "6", l: "Nhiệm vụ" },
+                { n: "20+", l: "Minh chứng" },
+                { n: "8", l: "Kỹ năng" },
+                { n: "100%", l: "Hoàn thành" },
+              ].map((s) => (
+                <div key={s.l} className="text-center p-3 rounded-2xl bg-card/70 border border-border backdrop-blur">
+                  <div className="text-2xl md:text-3xl font-bold text-primary">{s.n}</div>
+                  <div className="text-[11px] uppercase tracking-widest text-muted-foreground mt-1">{s.l}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
+          {/* Orbit visual */}
           <div className="reveal relative aspect-square max-w-md mx-auto w-full">
-            <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-primary/30 via-secondary/40 to-accent/30 blur-2xl" />
-            <div className="relative h-full rounded-[3rem] bg-gradient-to-br from-card to-muted border border-border overflow-hidden flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="text-8xl mb-4">🤖✨</div>
-                <div className="text-sm text-muted-foreground">Học tập số · AI có trách nhiệm</div>
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  {["📁", "🔎", "💬", "🤝", "🎨", "🛡️"].map((e) => (
-                    <div key={e} className="aspect-square rounded-2xl bg-background/60 border border-border flex items-center justify-center text-2xl hover:bg-primary/10 transition">
-                      {e}
-                    </div>
-                  ))}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-secondary/40 to-accent/30 blur-3xl" />
+            {/* Orbit rings */}
+            <div className="absolute inset-6 rounded-full border border-dashed border-primary/40 spin-slow" />
+            <div className="absolute inset-16 rounded-full border border-dashed border-secondary/40 spin-reverse" />
+            {/* Orbiting chips */}
+            {["📁", "🔎", "💬", "🤝", "🎨", "🛡️"].map((e, i) => {
+              const angle = (i / 6) * Math.PI * 2;
+              const r = 46;
+              const x = 50 + Math.cos(angle) * r;
+              const y = 50 + Math.sin(angle) * r;
+              return (
+                <div
+                  key={e}
+                  className="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-card border border-border shadow-lg shadow-primary/20 flex items-center justify-center text-xl float-slow"
+                  style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 0.4}s` }}
+                >
+                  {e}
                 </div>
+              );
+            })}
+            {/* Center core */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-card to-muted border border-border flex flex-col items-center justify-center text-center glow-ring">
+                <div className="text-5xl">🤖</div>
+                <div className="text-[11px] uppercase tracking-widest text-muted-foreground mt-2">AI · Human</div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Marquee ticker */}
+        <div className="relative mt-16 py-4 border-y border-border bg-card/40 backdrop-blur overflow-hidden">
+          <div className="flex marquee-track gap-10 text-sm font-semibold uppercase tracking-[0.25em] text-muted-foreground whitespace-nowrap">
+            {Array.from({ length: 2 }).flatMap((_, k) =>
+              [
+                "Quản lý dữ liệu số",
+                "★",
+                "Tìm kiếm học thuật",
+                "★",
+                "Prompt Engineering",
+                "★",
+                "Hợp tác trực tuyến",
+                "★",
+                "AI tạo sinh",
+                "★",
+                "AI có trách nhiệm",
+                "★",
+                "Tư duy phản biện",
+                "★",
+              ].map((t, i) => (
+                <span key={`${k}-${i}`} className={i % 2 ? "text-secondary" : "text-foreground/70"}>
+                  {t}
+                </span>
+              )),
+            )}
+          </div>
+        </div>
       </section>
+
 
       {/* ========== About ========== */}
       <Section id="about" eyebrow="About Me" title="Giới thiệu bản thân">
