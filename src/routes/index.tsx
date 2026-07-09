@@ -1213,7 +1213,7 @@ function Portfolio() {
               thủ các nguyên tắc liêm chính học thuật trong suốt quá trình học tập tại trường.
             </p>
             <div className="mt-5">
-              <div className="font-semibold text-primary">— Trịnh Xuân An</div>
+              <div className="font-semibold text-primary">— Nguyễn Phương Ly</div>
               <div className="text-xs text-muted-foreground">Sinh viên môn Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo</div>
             </div>
           </div>
