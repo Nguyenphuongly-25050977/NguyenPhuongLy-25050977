@@ -409,12 +409,17 @@ const PROJECTS: Project[] = [
       "Không dùng AI để giả mạo giọng nói hoặc hình ảnh người thật.",
     ],
     extra: (
-      <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
-        <div>
-          <div className="text-4xl mb-3">🎬</div>
-          <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
-          <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
+      <div className="mt-6 space-y-4">
+        <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 border border-primary/30 flex items-center justify-center text-center p-8 green-glow">
+          <div>
+            <div className="text-4xl mb-3">🎬</div>
+            <p className="font-semibold text-primary">Khu vực nhúng sản phẩm video / infographic</p>
+            <p className="text-sm text-muted-foreground mt-1">Thay bằng iframe YouTube hoặc ảnh sản phẩm thật.</p>
+          </div>
         </div>
+        <a href={p5Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn5.pdf
+        </a>
       </div>
     ),
   },
