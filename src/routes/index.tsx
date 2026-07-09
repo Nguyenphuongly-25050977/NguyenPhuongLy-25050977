@@ -333,28 +333,33 @@ const PROJECTS: Project[] = [
       "Không chỉnh sửa số liệu tiến độ để làm đẹp báo cáo.",
     ],
     extra: (
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full text-sm border-collapse">
-          <thead className="bg-primary/15 text-left">
-            <tr>
-              {["Thành viên", "Nhiệm vụ", "Hạn hoàn thành", "Trạng thái", "Ghi chú"].map((h) => (
-                <th key={h} className="p-3 border border-border font-semibold text-primary">{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="bg-card/60">
-            {[
-              ["An", "Thiết kế giao diện", "20/12", "Hoàn thành", "Đã review"],
-              ["Bình", "Viết nội dung", "22/12", "Đang làm", "Cần bổ sung ví dụ"],
-              ["Chi", "Tổng hợp minh chứng", "24/12", "Cần chỉnh sửa", "Thiếu ảnh Prompt"],
-              ["Dũng", "Kiểm tra & xuất bản", "26/12", "Chưa làm", "Chờ nhóm hoàn tất"],
-            ].map((row, i) => (
-              <tr key={i} className="hover:bg-secondary/20 transition">
-                {row.map((c, j) => <td key={j} className="p-3 border border-border">{c}</td>)}
+      <div className="mt-6 space-y-4">
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead className="bg-primary/15 text-left">
+              <tr>
+                {["Thành viên", "Nhiệm vụ", "Hạn hoàn thành", "Trạng thái", "Ghi chú"].map((h) => (
+                  <th key={h} className="p-3 border border-border font-semibold text-primary">{h}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="bg-card/60">
+              {[
+                ["An", "Thiết kế giao diện", "20/12", "Hoàn thành", "Đã review"],
+                ["Bình", "Viết nội dung", "22/12", "Đang làm", "Cần bổ sung ví dụ"],
+                ["Chi", "Tổng hợp minh chứng", "24/12", "Cần chỉnh sửa", "Thiếu ảnh Prompt"],
+                ["Dũng", "Kiểm tra & xuất bản", "26/12", "Chưa làm", "Chờ nhóm hoàn tất"],
+              ].map((row, i) => (
+                <tr key={i} className="hover:bg-secondary/20 transition">
+                  {row.map((c, j) => <td key={j} className="p-3 border border-border">{c}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <a href={p4Pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
+          📄 Xem báo cáo đầy đủ: BaoCao_DuAn4.pdf
+        </a>
       </div>
     ),
   },
