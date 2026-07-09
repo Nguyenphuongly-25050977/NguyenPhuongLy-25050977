@@ -1014,7 +1014,7 @@ function Portfolio() {
             <div className="space-y-10">
               {/* Progress rail */}
               <div className="reveal rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6">
-                <div className="flex items-center justify-between mb-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                <div className="flex items-center justify-between mb-4 text-xs font-bold uppercase tracking-[0.25em] text-foreground/70">
                   <span>Lộ trình học tập</span>
                   <span className="text-primary">6 / 6 hoàn thành</span>
                 </div>
@@ -1029,7 +1029,7 @@ function Portfolio() {
                           <a href={`#mission-${m.n}`} className={`relative z-10 w-10 h-10 rounded-full border-2 flex items-center justify-center font-black text-sm shadow-md ${tone} hover:scale-110 transition-transform`}>
                             {m.n}
                           </a>
-                          <span className="hidden sm:block text-[10px] uppercase tracking-widest text-muted-foreground">P{pi + 1}</span>
+                          <span className="hidden sm:block text-xs font-bold uppercase tracking-widest text-foreground/70">P{pi + 1}</span>
                         </li>
                       );
                     })}
@@ -1043,11 +1043,11 @@ function Portfolio() {
                       <div key={p.key} className={`rounded-xl border p-4 ${tone}`}>
                         <div className="flex items-center gap-2 mb-1">
                           <span className={`w-2.5 h-2.5 rounded-full ${dot}`} />
-                          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground">Giai đoạn {i + 1}</span>
+                          <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-foreground/70">Giai đoạn {i + 1}</span>
                         </div>
-                        <div className="font-semibold text-sm">{p.label}</div>
-                        <div className="text-xs text-muted-foreground mt-0.5">{p.range}</div>
-                        <div className="text-xs text-muted-foreground mt-2">{p.desc}</div>
+                        <div className="font-bold text-base text-foreground">{p.label}</div>
+                        <div className="text-sm font-semibold text-foreground/75 mt-0.5">{p.range}</div>
+                        <div className="text-sm text-foreground/70 mt-2">{p.desc}</div>
                       </div>
                     );
                   })}
@@ -1072,21 +1072,21 @@ function Portfolio() {
                           {String(m.n).padStart(2, "0")}
                         </div>
                         <div className="flex flex-col items-end gap-1">
-                          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground">Giai đoạn {pi + 1}</span>
-                          <span className="text-[10px] font-semibold uppercase tracking-widest text-primary px-2 py-0.5 rounded-full bg-primary/10">{phaseLabel}</span>
+                          <span className="text-xs font-extrabold uppercase tracking-[0.22em] text-foreground/70">Giai đoạn {pi + 1}</span>
+                          <span className="text-xs font-bold uppercase tracking-widest text-primary px-2 py-0.5 rounded-full bg-primary/10">{phaseLabel}</span>
                         </div>
                       </div>
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-2xl">{m.icon}</span>
-                        <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Nhiệm vụ {m.n}</span>
+                        <span className="text-xs font-extrabold uppercase tracking-widest text-foreground/75">Nhiệm vụ {m.n}</span>
                       </div>
-                      <h3 className="text-base font-semibold leading-snug mb-2 line-clamp-3">{m.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-4 flex-1">{m.desc}</p>
+                      <h3 className="text-base font-bold leading-snug mb-2 line-clamp-3 text-foreground">{m.title}</h3>
+                      <p className="text-sm font-medium text-foreground/75 mb-4 flex-1">{m.desc}</p>
                       <div className="flex items-center justify-between pt-3 border-t border-border/60">
-                        <span className="text-[11px] font-medium text-muted-foreground">
-                          <span className="text-foreground/80">Kỹ năng:</span> {skillOf(m.n)}
+                        <span className="text-xs font-semibold text-foreground/75">
+                          <span className="font-bold text-foreground">Kỹ năng:</span> {skillOf(m.n)}
                         </span>
-                        <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                        <a href={`#project-${m.n}`} className="inline-flex items-center gap-1 text-sm font-bold text-primary group-hover:gap-2 transition-all">
                           Chi tiết <span>→</span>
                         </a>
                       </div>
