@@ -1070,24 +1070,25 @@ function Portfolio() {
 
       {/* ========== Skills ========== */}
       <Section id="skills" eyebrow="Skills Matrix" title="Bảng tổng hợp kỹ năng đạt được">
-        <div className="grid md:grid-cols-2 gap-4">
-          {SKILLS.map((s) => (
-            <div key={s.name} className="reveal p-5 rounded-2xl bg-card border border-border">
-              <div className="flex justify-between items-baseline mb-2">
-                <h4 className="font-semibold">{s.name}</h4>
-                <span className="text-sm font-bold text-primary">{s.level}%</span>
+        <SkillsLineChart />
+        <div className="grid md:grid-cols-2 gap-3 mt-8">
+          {SKILLS.map((s, i) => (
+            <div key={s.name} className="reveal flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
+              <div className={`shrink-0 w-12 h-12 rounded-full grid place-items-center font-bold text-sm ${s.level === 100 ? "bg-primary text-primary-foreground" : "bg-primary/15 text-primary"}`}>
+                {s.level}%
               </div>
-              <div className="h-2 rounded-full bg-muted overflow-hidden mb-3">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000"
-                  style={{ width: `${s.level}%` }}
-                />
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">#{String(i + 1).padStart(2, "0")}</span>
+                  <h4 className="font-semibold truncate">{s.name}</h4>
+                </div>
+                <p className="text-sm text-muted-foreground"><strong className="text-foreground/80">Ứng dụng:</strong> {s.use}</p>
               </div>
-              <p className="text-sm text-muted-foreground"><strong className="text-foreground/80">Ứng dụng:</strong> {s.use}</p>
             </div>
           ))}
         </div>
       </Section>
+
 
       {/* ========== Conclusion ========== */}
       <Section id="conclusion" eyebrow="Conclusion" title="Tổng kết & tự đánh giá">
