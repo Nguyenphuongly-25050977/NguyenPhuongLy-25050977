@@ -979,8 +979,14 @@ function Portfolio() {
               {/* Tape */}
               <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 tape rounded-sm shadow z-10" />
               <div className="aspect-video relative overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-secondary/25 to-accent/20 grid-bg" />
-                <span className="relative text-6xl group-hover:scale-110 transition-transform">{e.icon}</span>
+                {e.img ? (
+                  <img src={e.img} alt={e.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-secondary/25 to-accent/20 grid-bg" />
+                    <span className="relative text-6xl group-hover:scale-110 transition-transform">{e.icon}</span>
+                  </>
+                )}
                 <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest bg-background/80 px-2 py-1 rounded-full">
                   #0{i + 1}
                 </span>
@@ -988,11 +994,12 @@ function Portfolio() {
                 <div className="p-5">
                   <h4 className="font-semibold mb-1">{e.title}</h4>
                   <p className="text-sm text-muted-foreground mb-4">{e.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Placeholder</span>
-                    <button className="text-sm font-semibold text-primary hover:underline">Xem chi tiết →</button>
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[10px] px-2 py-1 rounded-full bg-primary/15 text-primary uppercase tracking-widest">Dự án {i + 1}</span>
+                    <a href={e.href} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-primary hover:underline truncate">{e.fileLabel} →</a>
                   </div>
                 </div>
+
             </div>
           ))}
         </div>
