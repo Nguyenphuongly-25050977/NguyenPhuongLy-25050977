@@ -653,6 +653,15 @@ const EVIDENCE = [
     fileLabel: "📄 BaoCao_DuAn4.pdf",
   },
   {
+    project: 4,
+    icon: "📝",
+    title: "Báo cáo chi tiết dự án nhóm (Word)",
+    desc: "Bản Word đầy đủ: mục tiêu, phân công thành viên, tiến độ và kết quả cộng tác trực tuyến.",
+    img: null,
+    href: p4Docx.url,
+    fileLabel: "📎 BaoCao_DuAn4.docx",
+  },
+  {
     project: 5,
     icon: "🎨",
     title: "Infographic “AI in University Learning”",
