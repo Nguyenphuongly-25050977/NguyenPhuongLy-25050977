@@ -486,7 +486,7 @@ const PROJECTS: Project[] = [
 
         <div className="flex flex-wrap gap-3">
           <a href={p5Docx.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
-            📎 Minh chứng bổ sung: BaoCao_DuAn5.docx
+            {"\n"}: BaoCao_DuAn5.docx
           </a>
         </div>
       </div>
