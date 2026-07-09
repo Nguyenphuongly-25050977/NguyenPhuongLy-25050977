@@ -91,7 +91,7 @@ const PROJECTS: Project[] = [
       "Xóa các tệp tin không cần thiết (di chuyển vào Recycle Bin).",
     ],
     tools: "File Explorer, Microsoft Word, Windows 10/11",
-    evidence: "Ảnh chụp màn hình cấu trúc thư mục và ví dụ quy tắc đặt tên file.",
+    evidence: "\n",
     analysis: [
       "Cấu trúc phân cấp rõ ràng giúp dữ liệu dễ tìm, tránh thất lạc, thuận tiện khi nộp bài.",
       "Quy tắc đặt tên MonHoc_Chuong_BaiTap_NgayThucHien_PhienBan giúp phân biệt phiên bản cũ – mới, hỗ trợ làm việc lâu dài và chia sẻ nhóm.",
@@ -436,7 +436,7 @@ const PROJECTS: Project[] = [
       "Bước 6 – Hoàn thiện và xuất bản sản phẩm.",
     ],
     tools: "ChatGPT, Canva, CapCut, Gemini, DALL·E",
-    evidence: "Video ngắn dưới 5 phút hoặc infographic được nhúng bên dưới.",
+    evidence: "\n",
     analysis: [
       "AI tăng tốc lên ý tưởng và sản xuất nội dung, nhưng con người quyết định thông điệp cuối cùng.",
       "Vai trò con người: chọn lọc, biên tập, đảm bảo tính chính xác và cá nhân hóa.",
@@ -486,7 +486,7 @@ const PROJECTS: Project[] = [
 
         <div className="flex flex-wrap gap-3">
           <a href={p5Docx.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
-            📎 Minh chứng bổ sung: BaoCao_DuAn5.docx
+            {"\n"}: BaoCao_DuAn5.docx
           </a>
         </div>
       </div>
@@ -504,7 +504,7 @@ const PROJECTS: Project[] = [
       "Xây dựng bộ nguyên tắc sử dụng AI cá nhân gồm 7 điều.",
     ],
     tools: "Tài liệu học thuật, quy định nhà trường, các công cụ AI phổ biến",
-    evidence: "Ảnh bộ nguyên tắc cá nhân và bảng phân tích rủi ro đạo đức.",
+    evidence: "\n",
     analysis: [
       "AI mang lại nhiều cơ hội nhưng cũng tạo rủi ro về đạo đức học thuật.",
       "Người học cần phát triển năng lực tự đánh giá, phản biện và kiểm chứng.",
@@ -568,7 +568,7 @@ const PROJECTS: Project[] = [
         </div>
         <div className="flex flex-wrap gap-3">
           <a href={p6Docx.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary font-semibold hover:bg-primary/25 transition green-glow">
-            📎 Minh chứng bổ sung: BaoCao_DuAn6.docx
+            {"\n"}: BaoCao_DuAn6.docx
           </a>
         </div>
       </div>
