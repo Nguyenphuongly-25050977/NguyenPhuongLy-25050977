@@ -979,7 +979,7 @@ function Portfolio() {
               <p className="text-sm text-foreground/90 leading-relaxed italic">
                 “Mỗi bài tập trong môn học không chỉ là một nhiệm vụ cần hoàn thành, mà còn là cơ hội để em trải nghiệm sức mạnh của công nghệ số và AI trong học tập. Em học được cách tổ chức thông tin khoa học hơn, đặt câu hỏi thông minh hơn với AI, và đặc biệt là ý thức rõ trách nhiệm khi sử dụng công cụ tạo sinh. Portfolio này là minh chứng cho sự nỗ lực, kiên trì và niềm đam mê học hỏi của em.”
                 {"\n"}
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;— Nguyễn Phương LY-
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;—Nguyễn Phương Ly-
               </p>
             </div>
           </div>
