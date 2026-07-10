@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
 
 // Đổi tên repo GitHub ở đây nếu bạn đổi repo. Với custom domain, để BASE = "/".
-const REPO = "warm-glow-reactor";
+const REPO = "NguyenPhuongLy-25050977";
 
 export default defineConfig(({ mode }) => ({
   base: mode === "production" ? `/${REPO}/` : "/",
