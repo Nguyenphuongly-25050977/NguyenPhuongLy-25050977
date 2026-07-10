@@ -1,42 +1,43 @@
 // GitHub Pages SPA — không dùng router (chỉ có 1 trang)
 import { useEffect, useState } from "react";
-import p1Taskbar from "@/assets/project1/taskbar.png.asset.json";
-import p1PcNay from "@/assets/project1/pc-nay.png.asset.json";
-import p1NewFolder from "@/assets/project1/new-folder.png.asset.json";
-import p1GhiChu from "@/assets/project1/ghichu-file.png.asset.json";
-import p1CopyMenu from "@/assets/project1/copy-menu.png.asset.json";
-import p1Docx from "@/assets/project1/GhiChuQuanTrong.docx.asset.json";
-import p2Pdf from "@/assets/project2/BaoCaoTimKiemThongTin.pdf.asset.json";
-import p3Pdf from "@/assets/project3/BaoCao_DuAn3.pdf.asset.json";
-import p4Pdf from "@/assets/project4/BaoCao_DuAn4.pdf.asset.json";
-import p4Docx from "@/assets/project4/BaoCao_DuAn4.docx.asset.json";
-import p4Docx2 from "@/assets/project4/BaoCao_DuAn4_v2.docx.asset.json";
-import p4Img1 from "@/assets/project4/p4-drive-empty.png.asset.json";
-import p4Img2 from "@/assets/project4/p4-trello.png.asset.json";
-import p4Img3 from "@/assets/project4/p4-drive-files.png.asset.json";
 
-import p5Pdf from "@/assets/project5/BaoCao_DuAn5.pdf.asset.json";
-import p5Docx from "@/assets/project5/BaoCao_DuAn5.docx.asset.json";
-import p5Img1 from "@/assets/project5/infographic1.png.asset.json";
-import p5Img2 from "@/assets/project5/dalle-feedback.png.asset.json";
-import p5Img3 from "@/assets/project5/infographic-full.png.asset.json";
+// Toàn bộ ảnh/pdf/docx nằm trong /public/assets/ nên serve tĩnh trên GitHub Pages.
+// import.meta.env.BASE_URL = "/" khi dev, "/warm-glow-reactor/" khi build production.
+const B = import.meta.env.BASE_URL;
+const a = (p: string) => ({ url: `${B}assets/${p}` });
 
-
-import p6Pdf from "@/assets/project6/BaoCao_DuAn6.pdf.asset.json";
-import p6Docx from "@/assets/project6/BaoCao_DuAn6.docx.asset.json";
-import p6Img1 from "@/assets/project6/prompt-danyai.png.asset.json";
-import p6Img2 from "@/assets/project6/prompt-loiich.png.asset.json";
-import p6Poster from "@/assets/project6/ai-trach-nhiem-poster.png.asset.json";
-
-import p2Src1 from "@/assets/project2/nguon14.png.asset.json";
-import p2Src2 from "@/assets/project2/nguon15.png.asset.json";
-import p2Src3 from "@/assets/project2/nguon16.png.asset.json";
-import p2Src4 from "@/assets/project2/nguon17.png.asset.json";
-import p3Src1 from "@/assets/project3/prompt1.png.asset.json";
-import p3Src2 from "@/assets/project3/prompt2.png.asset.json";
-import p3Src3 from "@/assets/project3/prompt3.png.asset.json";
-import avatarLy from "@/assets/avatar-ly.jpg.asset.json";
-
+const p1Taskbar = a("project1/taskbar.png");
+const p1PcNay = a("project1/pc-nay.png");
+const p1NewFolder = a("project1/new-folder.png");
+const p1GhiChu = a("project1/ghichu-file.png");
+const p1CopyMenu = a("project1/copy-menu.png");
+const p1Docx = a("project1/GhiChuQuanTrong.docx");
+const p2Pdf = a("project2/BaoCaoTimKiemThongTin.pdf");
+const p3Pdf = a("project3/BaoCao_DuAn3.pdf");
+const p4Pdf = a("project4/BaoCao_DuAn4.pdf");
+const p4Docx = a("project4/BaoCao_DuAn4.docx");
+const p4Docx2 = a("project4/BaoCao_DuAn4_v2.docx");
+const p4Img1 = a("project4/p4-drive-empty.png");
+const p4Img2 = a("project4/p4-trello.png");
+const p4Img3 = a("project4/p4-drive-files.png");
+const p5Pdf = a("project5/BaoCao_DuAn5.pdf");
+const p5Docx = a("project5/BaoCao_DuAn5.docx");
+const p5Img1 = a("project5/infographic1.png");
+const p5Img2 = a("project5/dalle-feedback.png");
+const p5Img3 = a("project5/infographic-full.png");
+const p6Pdf = a("project6/BaoCao_DuAn6.pdf");
+const p6Docx = a("project6/BaoCao_DuAn6.docx");
+const p6Img1 = a("project6/prompt-danyai.png");
+const p6Img2 = a("project6/prompt-loiich.png");
+const p6Poster = a("project6/ai-trach-nhiem-poster.png");
+const p2Src1 = a("project2/nguon14.png");
+const p2Src2 = a("project2/nguon15.png");
+const p2Src3 = a("project2/nguon16.png");
+const p2Src4 = a("project2/nguon17.png");
+const p3Src1 = a("project3/prompt1.png");
+const p3Src2 = a("project3/prompt2.png");
+const p3Src3 = a("project3/prompt3.png");
+const avatarLy = a("avatar-ly.jpg");
 
 export default Portfolio;
 
