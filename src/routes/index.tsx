@@ -926,8 +926,8 @@ function Portfolio() {
       <Section id="about" eyebrow="About Me" title="Giới thiệu bản thân">
         <div className="grid md:grid-cols-[1fr_1.6fr] gap-8">
           <div className="reveal rounded-3xl p-8 bg-card border border-border shadow-xl shadow-primary/5">
-            <div className="w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-5xl">
-              👩‍🎓
+            <div className="w-32 h-32 rounded-full mx-auto overflow-hidden ring-4 ring-primary/30 shadow-lg">
+              <img src={avatarLy.url} alt="Ảnh đại diện Nguyễn Phương Ly" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-center mt-5 text-xl font-bold">Họ Và Tên: Nguyễn Phương Ly</h3>
             <p className="text-center text-sm text-muted-foreground">Sinh viên · Công nghệ số &amp; AI</p>
