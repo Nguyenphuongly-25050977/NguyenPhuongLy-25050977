@@ -38,9 +38,7 @@ import p3Src3 from "@/assets/project3/prompt3.png.asset.json";
 import avatarLy from "@/assets/avatar-ly.jpg.asset.json";
 
 
-export const Route = createFileRoute("/")({
-  component: Portfolio,
-});
+export default Portfolio;
 
 /* ============ Data ============ */
 const NAV = [
