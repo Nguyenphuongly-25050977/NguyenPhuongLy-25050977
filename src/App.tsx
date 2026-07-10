@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+// GitHub Pages SPA — không dùng router (chỉ có 1 trang)
 import { useEffect, useState } from "react";
 import p1Taskbar from "@/assets/project1/taskbar.png.asset.json";
 import p1PcNay from "@/assets/project1/pc-nay.png.asset.json";
