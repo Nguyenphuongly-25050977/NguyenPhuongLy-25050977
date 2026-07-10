@@ -35,6 +35,7 @@ import p2Src4 from "@/assets/project2/nguon17.png.asset.json";
 import p3Src1 from "@/assets/project3/prompt1.png.asset.json";
 import p3Src2 from "@/assets/project3/prompt2.png.asset.json";
 import p3Src3 from "@/assets/project3/prompt3.png.asset.json";
+import avatarLy from "@/assets/avatar-ly.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
